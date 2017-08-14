@@ -1,0 +1,76 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.blog-post {
+	width: 70%;
+	margin: 0px 15%;
+}
+
+.blog-image {
+	margin-top: 40px;
+	width: 100%;
+}
+
+.blog-image > img {
+	width: 80%;
+	margin: 0px 10%;
+}
+
+.blog-header {
+	width: 60% !important;
+	margin-left: 10%; 
+	float:left;
+}
+
+.blog-title {
+	text-align: left;
+	font-size: 50px;
+	margin: 20px 0px;
+	font-family: 'Playfair Display', serif, bold;
+	font-weight: 700;
+	margin-bottom: 35px;
+}
+
+.blog-description {
+	text-align: left;
+	font-size: 20px;
+	margin: 0px 5px;
+	font-family: 'Playfair Display', serif;
+	margin-bottom: 15px;
+}
+
+.blog-info {
+	text-align: left;
+	font-size: 20px;
+	margin: 0px 5px;
+	font-family: 'Abril Fatface', cursive;
+	letter-spacing: 1px;
+}
+
+#blog-text {
+	width: 60% !important;
+	margin: 0px 10%; 
+	font-family: "Raleway", sans-serif;
+	font-size: 15px;
+}
+
+.text-modify {
+	padding-top: 40px;
+	float: left;
+	width: 15%;
+	text-align: center;
+}
+
+.text-minus {
+font-size:25px;
+	padding: 20px 0px;
+}
+
+.text-plus {
+font-size:25px;
+}
+
+.text-mod-button {
+	width: 30px;
+	height: 30px;
+}

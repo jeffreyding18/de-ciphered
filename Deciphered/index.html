@@ -1,0 +1,324 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>CYBERSECURITY</title>
+    <!-- BOOTSTRAP CORE STYLE CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONT AWESOME CSS -->
+<link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+     <!-- FLEXSLIDER CSS -->
+<link href="assets/css/flexslider.css" rel="stylesheet" />
+    <!-- CUSTOM STYLE CSS -->
+    <link href="assets/css/style.css" rel="stylesheet" />    
+  <!-- Google	Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css' />
+	
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet" />
+</head>
+<body >
+   
+ <div class="navbar navbar-inverse navbar-absolute-top " id="menu">
+        <div class="container">
+            <div class="navbar-header">
+                
+            </div>
+            
+            <div class="navbar-collapse collapse move-me" id="colorUpdate">
+              
+            <div class="nav navbar-nav navbar-left"><br>
+          		<div class="list-element-topbar-left">
+					<button onclick="myFunction()" class="listColor dropdown-button dropbtn">
+						TOPICS
+					</button>
+         		<div id="main-dropdown" class="dropdown-content">
+         		<div class="col-lg-2 col-md-2 col-sm-2 col-lg-offset-2">
+         			         			<header>
+         				<a href="1. Applications/Websites.html">
+         				Websites
+         				</a>
+         			</header>
+         			<ul> 
+         				<li class="menu-list">
+         					<a href="1. Applications/Websites.html#z1.0">
+         						I. What is a website?
+         					</a>
+         				</li>
+         				<li class="menu-list">
+         					<a href="1. Applications/Websites.html#z2.0">
+         						II. Website Communication
+         					</a>
+         				</li>
+         				<li class="menu-list">
+         					<a href="1. Applications/Websites.html#z3.0">
+         						III. Security Risks
+         					</a>
+         				</li>
+         				<li class="menu-list">
+         					<a href="1. Applications/Websites.html#z4.0">
+         						IV. Common Attacks
+         					</a>
+         				</li>
+         			</ul>
+         			<header>
+         				<a href="1. Applications/Non-Websites.html">
+         				Non-Websites
+         				</a>
+         			</header>
+         			<ul>
+         				<li class="menu-list">
+         					<a href="1. Applications/Non-Websites.html#z2.0">
+         						I. Common Vulnerabilities
+         					</a>
+         				</li>
+         				<li class="menu-list">
+         					<a href="1. Applications/Non-Websites.html#z3.0">
+         						II. The Cloud
+         					</a>
+         				</li>
+         				<li class="menu-list">
+         					<a href="1. Applications/Non-Websites.html#z4.0">
+         						III. WiFi Networks
+         					</a>
+         				</li>
+         				<li class="menu-list">
+         					<a href="1. Applications/Non-Websites.html#z5.0">
+         						IV. Industrial Data Storage
+         					</a>
+         				</li>
+         			</ul>
+         		</div>
+         			<!--
+					<a href="#home">Home</a>
+					<a href="#about">About</a>
+					<a href="#contact">Contact</a>
+					-->
+				  </div>
+          		</div>
+            </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li> <a  href="index.html" class="listColor"> HOME </a> </li>
+					<li> <a href="1. Applications/Linking-Page.html" class="listColor"> APPLICATION AND CONSEQUENCES </a> </li>
+					<li> <a href="2. Politics and Ethics/Linking-page-PnE.html" class="listColor"> POLITICS AND ETHICS </a> </li>
+					<li> <a href="3. Mathematics/Linking-page-math.html" class="listColor"> MATHEMATICS </a> </li>
+               		<li> <a href="" class="listColor"> BLOG </a> </li>
+                </ul>
+            </div>
+          
+        </div>
+    </div>
+      <script type="text/javascript">
+		  /*
+		  Changes the color of the nav bar text to black
+		  */
+			 var menu = document.getElementById("menu")
+			 var menuElems = document.getElementsByClassName("listColor")
+			  menu.addEventListener("mouseover", function() {
+				  
+				for(i = 0; i < menuElems.length; i++) {
+					  menuElems[i].style.color="black"
+				  }
+				
+				  
+			 })
+		</script>
+     
+     	<script type="text/javascript">
+			/*
+			Changes the color of the nav bar text to white
+			*/
+			 var menu = document.getElementById("menu")
+			 var menuElems = document.getElementsByClassName("listColor")
+			  menu.addEventListener("mouseout", function() {
+				  
+				for(i = 0; i < menuElems.length; i++) {
+					  menuElems[i].style.color="white"
+				  }
+				  
+			 })
+		</script>
+     
+     	
+      <!--NAVBAR SECTION END-->
+       <div class="home-sec" id="home" >
+           <div class="overlay">
+ 				<div class="container">
+				   <div class="row text-center " >
+
+					   <div class="col-lg-12  col-md-12 col-sm-12">
+
+							<div class="flexslider set-flexi" id="main-section" >
+									<h1> <img src="assets/img/headerTextT.png" alt="headertext" width="80%"></h1>
+										<a href="" class="btn btn-head btn-lg" style="padding: 12px 80px;" >
+											Learn More
+										</a>
+							</div>
+
+						</div>
+
+					</div>
+                </div>
+           </div>
+           
+       </div>
+      
+	<script>
+	/* When the user clicks on the button, 
+	toggle between hiding and showing the dropdown content */
+	function myFunction() {
+		document.getElementById("main-dropdown").classList.toggle("show");
+	
+	}
+
+	// Close the dropdown if the user clicks outside of it
+	window.onclick = function(event) {
+	  if (!event.target.matches('.dropbtn')) {
+
+		var dropdowns = document.getElementsByClassName("dropdown-content");
+		var i;
+		for (i = 0; i < dropdowns.length; i++) {
+		  var openDropdown = dropdowns[i];
+		  if (openDropdown.classList.contains('show')) {
+			openDropdown.classList.remove('show');
+		  }
+		}
+		  
+	  }
+	}
+	</script>
+       <!--HOME SECTION END-->   
+
+   			<div class="topic" id="applications">
+				
+					<div class="col-lg-2  col-md-2 col-sm-2 col-lg-offset-2 col-md-offset-2 col-sm-offset-2">
+					<h2 class="topic-header">
+						<div class="topic-text">
+						<a href="1. Applications/Linking-Page.html"><strong> Applications </strong> </a>
+						</div> 
+					</h2>
+					</div>
+					
+					<div class="col-lg-6  col-md-6 col-sm-6 topic-exp">
+						What is Cybersecurity and why should we care? How is it used? In this section, we'll explore the different applications for Cybersecurity, covering the basics of websites and web security, along with other common questions. We'll also have a section with our suggestions for you - what can you do as an individual to stay safe on the internet!
+					</div>
+			
+       		</div>
+       		
+       		<div class="topic" id="politicsAndEthics">
+				
+					<div class="col-lg-2  col-md-2 col-sm-2 col-lg-offset-2 col-md-offset-2 col-sm-offset-2">
+					<h2 class="topic-header">
+						<div class="topic-text">
+						<a href="2. Politics and Ethics/Linking-page-PnE.html"> <strong> Politics and ethics </strong> </a>
+						</div>
+					</h2>
+					</div>
+					<div class="col-lg-6  col-md-6 col-sm-6 topic-exp">
+						What rules and regulations are in place surrounding Cybersecurity? What are the ethical dilemnas? In this section, we'll explore the politics of cybersecurity and the ethical impact of the topic. We'll look into topics like the FCC and Net Neutrality, and delve into the debate of privacy vs. security. 
+					</div>
+
+       		</div>
+       		
+       		<div class="topic" id="Mathematics">
+				
+					<div class="col-lg-2  col-md-2 col-sm-2 col-lg-offset-2 col-md-offset-2 col-sm-offset-2">
+					<h2 class="topic-header">
+						<div class="topic-text">
+						<a href="3. Mathematics/Linking-page-math.html"> <strong> Mathematics </strong> </a>
+						</div>
+					</h2>
+					</div>
+					<div class="col-lg-6  col-md-6 col-sm-6 topic-exp">
+						What is encryption? What are some common encryption methods? In this section, we'll explore the topic of encryption. We'll look into RSA, DES and AES, explaining the encryption methods both conceptually and mathematically. We'll explain some protocols such as TLS and SSH. 
+					</div>
+			
+       		</div>
+
+    <div id="PnE-sec"   >
+           <div class="overlay">
+ <div class="container set-pad">
+      <div class="row text-center">
+                 <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+                     <h1 data-scroll-reveal="enter from the bottom after 0.1s" class="header-line" >CONTACT US  </h1>
+                     <p data-scroll-reveal="enter from the bottom after 0.3s">
+                      Hey! Thanks for visiting the site. If you have any comments, recommendations, criticism, send it our way below. 
+                         </p>
+                 </div>
+
+             </div>
+             <!--/.HEADER LINE END-->
+           <div class="row set-row-pad"  data-scroll-reveal="enter from the bottom after 0.5s" >
+           
+               
+                 <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+                    <form action="mailto:jding@thacher.org">
+                        <div class="form-group">
+                            <input type="text" class="form-control "  required="required" placeholder="Your Name" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control " required="required"  placeholder="Your Email" />
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" required class="form-control" style="min-height: 150px;" placeholder="Message"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-info btn-block btn-lg">SUBMIT REQUEST</button>
+                        </div>
+
+                    </form>
+                </div>
+          
+               </div>
+                </div>
+          </div> 
+       </div>
+     <div class="container">
+             <div class="row set-row-pad"  >
+    <div class="col-lg-4 col-md-4 col-sm-4   col-lg-offset-1 col-md-offset-1 col-sm-offset-1 " data-scroll-reveal="enter from the bottom after 0.4s">
+
+                    <h2 ><strong>Our Location </strong></h2>
+        <hr />
+                    <div>
+                        <h4>234/80 -UFG , New Street,</h4>
+                        <h4>Switzerland.</h4>
+                        <h4><strong>Call:</strong>  + 67-098-907-1269 / 70 / 71 </h4>
+                        <h4><strong>Email: </strong>info@yourdomain.com</h4>
+                    </div>
+
+
+                </div>
+                 <div class="col-lg-4 col-md-4 col-sm-4   col-lg-offset-1 col-md-offset-1 col-sm-offset-1" data-scroll-reveal="enter from the bottom after 0.4s">
+
+                    <h2 ><strong>Social Conectivity </strong></h2>
+        <hr />
+                    <div >
+                        <a href="#">  <img src="assets/img/Social/facebook.png" alt="" /> </a>
+                     <a href="#"> <img src="assets/img/Social/google-plus.png" alt="" /></a>
+                     <a href="#"> <img src="assets/img/Social/twitter.png" alt="" /></a>
+                    </div>
+                    </div>
+
+
+                </div>
+                 </div>
+     <!-- CONTACT SECTION END-->
+
+   
+    <!--  Jquery Core Script -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <!--  Core Bootstrap Script -->
+    <script src="assets/js/bootstrap.js"></script>
+    <!--  Flexslider Scripts --> 
+         <script src="assets/js/jquery.flexslider.js"></script>
+     <!--  Scrolling Reveal Script -->
+    <script src="assets/js/scrollReveal.js"></script>
+    <!--  Scroll Scripts --> 
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <!--  Custom Scripts --> 
+         <script src="assets/js/custom.js"></script>
+        
+</body>
+</html>

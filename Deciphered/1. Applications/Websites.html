@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../2. Politics and Ethics/Linking-page-PnE.html">
+<link href="../assets/css/bootstrap.css" rel="stylesheet" />
+<!-- FONT AWESOME CSS -->
+<link href="../assets/css/font-awesome.min.css" rel="stylesheet" />
+<!-- FLEXSLIDER CSS -->
+<link href="../assets/css/flexslider.css" rel="stylesheet" />
+<!-- CUSTOM STYLE CSS -->
+<link href="../assets/css/style.css" rel="stylesheet" />
+<!-- Google	Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css' />
+</head>
+<body>
+<script src="../assets/js/jquery-1.10.2.js"></script>
+<div class="menuBackground">
+  <div class="navbar navbar-inverse navbar-absolute-top secondaryPage" id="menuSecondary">
+    <div class="container">
+      <div class="navbar-header"> </div>
+      <div class="navbar-collapse collapse move-me" id="colorUpdate">
+        <div class="nav navbar-nav navbar-left"><br>
+          <div class="list-element-topbar-left">
+            <button onclick="myFunction()" class="listColor dropdown-button dropbtn"> TOPICS </button>
+            <div id="main-dropdown" class="dropdown-content" style="margin-top:30px">
+              <div class="col-lg-2 col-md-2 col-sm-2 col-lg-offset-2">
+                <header> <a href="Websites.html"> Websites </a> </header>
+                <ul>
+                  <li class="menu-list"> <a href="Websites.html#z1.0"> I. What is a website? </a> </li>
+                  <li class="menu-list"> <a href="Websites.html#z2.0"> II. Website Communication </a> </li>
+                  <li class="menu-list"> <a href="Websites.html#z3.0"> III. Security Risks </a> </li>
+                  <li class="menu-list"> <a href="Websites.html#z4.0"> IV. Common Attacks </a> </li>
+                </ul>
+                <header> <a href="Non-Websites.html"> Non-Websites </a> </header>
+                <ul>
+                  <li class="menu-list"> <a href="Non-Websites.html#z2.0"> I. Common Vulnerabilities </a> </li>
+                  <li class="menu-list"> <a href="Non-Websites.html#z3.0"> II. The Cloud </a> </li>
+                  <li class="menu-list"> <a href="Non-Websites.html#z4.0"> III. WiFi Networks </a> </li>
+                  <li class="menu-list"> <a href="Non-Websites.html#z5.0"> IV. Industrial Data Storage </a> </li>
+                </ul>
+              </div>
+              <!--
+					<a href="#home">Home</a>
+					<a href="#about">About</a>
+					<a href="#contact">Contact</a>
+					--> 
+            </div>
+          </div>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li> <a  href="../index.html" class="listColor"> HOME </a> </li>
+          <li> <a href="Linking-Page.html" class="listColor"> APPLICATION AND CONSEQUENCES </a> </li>
+          <li> <a href="../2. Politics and Ethics/Linking-page-PnE.html" class="listColor"> POLITICS AND ETHICS </a> </li>
+          <li> <a href="../3. Mathematics/Linking-page-math.html" class="listColor"> MATHEMATICS </a> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="main">
+  <div class="sidebar" id="scrolling-sidebar">
+    <div id="leftTab" class="tabText">
+      <h2> WEBSITES</h2>
+      <ul>
+        <li> <a href="#z1.0"> 1. What is a website? </a>
+          <ul class="inner-list">
+            <li> <a href="#z1.1"> I. How does a website work? </a> </li>
+            <li> <a href="#z1.2"> II. What is a web browser? </a> </li>
+          </ul>
+        </li>
+        <li> <a href="#z2.0"> 2. Website Communication </a>
+          <ul class="inner-list">
+            <li> <a href="#z2.1"> I. Where does the data go / get stored? </a> </li>
+            <li> <a href="#z2.2"> II. What are cookies? </a> </li>
+          </ul>
+        </li>
+        <li> <a href="#z3.0"> 3. Security Risks </a>
+          <ul class="inner-list">
+            <li> <a href="#z3.1"> I. Can websites access my computer? </a> </li>
+            <li> <a href="#z3.2"> II. Access Control </a> </li>
+            <li> <a href="#z3.3"> III. Software Vulnerability </a> </li>
+          </ul>
+        </li>
+        <li> <a href="#z4.0"> 4. Common Attacks </a>
+          <ul class="inner-list">
+            <li> <a href="#z4.1"> I. Exploit Kits </a> </li>
+            <li> <a href="#z4.2"> II. Denial of Service Attacks </a> </li>
+          </ul>
+        </li>
+      </ul>
+      <div class="next-page">
+        <p> Next Topic: </p>
+        <button class="sidebar-table-button-nextPage" onClick="javascript:document.location='Non-Websites.html'"> Non-Websites </button>
+      </div>
+      <div class="back-to-top">
+        <button class="sidebar-table-button-topOfPage" onClick="javascript:document.location='Non-Websites.html'"> Back to top! </button>
+      </div>
+    </div>
+    <div id="rightTab" class="tabText" style="display:none">
+				<h2>Terms</h2>
+				<form>
+					<input id="vocab" type="text" name="search" placeholder="Search..." onKeyUp="vocabSet(this.value)" autocomplete="off">
+				</form>
+				<p id="txtHint"></p>
+	</div>
+
+   
+    <div class="sidebar-button-holder">
+      <button class="sidebar-buttons" onclick="openLeft()" id="leftButton">Contents</button>
+      <button class="sidebar-buttons" onclick="openRight()" id="rightButton">Definitions</button>
+    </div>
+  </div>
+  <div class="text-container">
+    <div class="text">
+      <h1> Websites: The basics </h1>
+      <div class="text-body">
+        <h3 id="z1.0"> What is a website? </h3>
+        <p> I’m sure all of you know how to access and use a website (I mean, you’re on one now), but what is it? On the most fundamental level, a website is a collection of documents and files that tell the computer what to show on your screen. In order to access the website, you must navigate to a web address, typically associated with some form of domain name. Accessing the website tells your web browser what to show (using the documents and files). 
+        </p>
+        
+        <h4 id="z1.1"> How does a website work? </h4>
+        <p> A website is just a bunch of pages of text. These files are written in a multitude of different coding “languages”, the most basic of which is HTML (Hypertext Markup Language) and CSS (Cascading Style Sheets). HTML makes up the bare bones of the website, dictating the text on the screen and the location of each element. In contrast, CSS tells the website how to display the HTML, defining the font, size, size, etc… For example, the HTML would tell the website to… [insert direct example from the current webpage in]. There are a multitude of different languages people use for website design, but the fundamental idea is the same - the text files define the layout and style of the website and the web browser takes this information to create a visual on your computer. </p>
+        <h4 id="z1.2"> What is a web browser? </h4>
+        <p> First off, you know what a browser is. Just an application that allows you to access the internet. They all use roughly the same design, and really aren’t that different from each other. I know this may offend some of you, but Internet Explorer (or it's edgy counterpart) gives basically the same user experience as Chrome or Firefox. Google Ultron > all. </p>
+        <p> What you may not know, however, is how a browser works. If websites are a collection of text and images and code, then the browser is a combination of a filing system and a translator. It translates the HTML and CSS code of the site into a page that is easily viewable and intractable. This means taking those text and images and placing them on the screen in the place and size the code dictates. It then sorts all those files and links them together, allowing easy access not only to the individual pages, but to the site as a whole. </p>
+        <h3 id="z2.0"> How does a website communicate with my computer? </h3>
+        <p> Websites communicate with your computer via web-server. A web server is like a website’s bank. Whenever your computer wants to access a certain website, it makes a request to that website’s server, which then sends the website data to the web browser. In addition to being the keeper of the site, a web server also keeps the data that you store on said site. All of your passwords, upvotes, pictures, dank memes, posts, and regrets are kept on their respective site’s server as data. Now, this doesn’t mean just anyone can open up that server and steal all of your info. A bank has to have security, after all. </p>
+        <p> Servers and computers communicate using HTTP, or hypertext transfer protocol. It acts as a request from your computer to the server, letting the server know that you need access. If you are granted this access, you will be let through to the website. This is why every website’s URL begins with HTTP (or HTTPS if you’re secure). </p>
+        <h4 id="z2.1"> Where does the data go / get stored? </h4>
+        <p> One important thing to remember is that data is physical, if small.  While 64 gigabytes of space might fit on a micro-sd nowadays, on a platform like youtube a terabyte or two just won’t cut it. There are 100,000 hours of video uploaded every minute, and that kind of data requires a lot of physical space. Web servers contain our data, but they themselves are hosted on machines, be it actual computers or gigantic 800,000ft2 google data centers. </p>
+        <h4 id="z2.2"> What are cookies? </h4>
+        <p> Cookies are round, baked goods invented in the 7th century in Persia. They are usually sweet evil, and contain many calories various delicious things in them </p>
+        <p> ... Just kidding. When you visit a website, that site creates a storage bin in your computer. This is where the website places data it needs to retrieve later - usernames (if you clicked remember me), ip addresses, and various other tracking data. Cookies are simply the packaging the website uses to ship the data into those storage bins. This only includes user data - things such as uploaded pictures and comments are all kept on the websites server. </p>
+        <h3 id="z3.0"> What are the security risks/vulnerabilities? </h3>
+        <p> To put this into perspective, an average of 30,000 websites are hacked each day. Estimates put the number of hacked websites between 2-5% of all websites. Ranging from large corporations to small blogs, these attacks can do anything from put a startup out of business to infect thousands of unknowing visitors to the website. There are many different types of vulnerabilities that websites have, but the most common are from access control and </p>
+        <h4 id="z3.1"> Can websites access my computer? </h4>
+        <p> Well, not exactly. Most websites have things called cookies (introduced above) that track little bits of information, but don’t grant complete access to the computer. There are cases when websites can give the user a virus to allow access to someone else, but a website cannot directly “access” your computer in a sense. However, there are various different ways websites can contribute to your information being compromised. </p>
+        <h6 id="z3.2"> Access Control </h6>
+        <p> Access Control is everything that an administrator has to log in to. This could include public log-ins (making an account for a website, like Facebook). However, this would also includes things such as logging into your personal computer, or logging into your server, or logging into your website (the CMS you use). It is important to think past just the accounts and authentication on the surface - protecting just the public log-in is not enough. If you lock the front door, but leave your windows open, what’s the point? </p>
+        <h6 id="z3.3"> Software Vulnerability </h6>
+        <p> This is where it gets complex. With access control, strong filtration and safety storing data is often enough. However, with software, thousands of lines of code are often too much to sift through. Furthermore, companies often run code from a dozen sources, in different languages and structures. The majority of the code may be up to date, but some may have not been updated and as a result, grant a vulnerability for a hacker to attack. Due to the variety in software, this is often where more targeted companies are at risk. </p>
+        <h3 id="z4.0"> What are common forms of cyber-attacks? </h3>
+        <h6 id="z4.1"> Exploit Kits </h6>
+        <p> Exploit kits are the most common form of malware distribution, and can be difficult to avoid if you aren’t aware of how they work. When a hacker takes control of a website, often they don’t do anything right away. Instead, they make it so that anyone who visits that site will automatically be redirected to another web server, which silently gathers data about the user on it. Once it has gathered enough data, the server figures out how it can exploit your computer, and silently downloads and installs malware onto it. Now, it's important to realize that exploit kits aren’t a kind of malware by themselves, just a method used to download malware to your computer. For ways to avoid getting your computer infected, look below. </p>
+        <h6 id="z4.2"> Denial of Service Attacks </h6>
+        <p> You’ve probably heard of the DoS attack (Denial of Service attack). It can be devastating shutting down popular websites for hours and seemingly coming out of nowhere. Think of a website like a business - the only way to access into the website is through it's front door. Now, if someone tries to block that front door, it gets harder to move around him and into the website. If a hundred people block the door, you’d have to barge your way through. If a thousand people block it, there's no getting in. In a simmelar way, a DoS attack floods a websites server with bogus requests, blocking access. WIth larger websites, this can equate to tens of thousands  of requests per second, but the real devestation acomes when smaller websites are DoSed, as it take quite a few resources to recover. 175 minerals, and 250 vespean gas to be exact. </p>
+        <div class="next-page">
+          <button class="next-page-button" onClick="javascript:document.location='Non-Websites.html'"> Next Topic: NON-WEBSITES </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-template">
+    <div class="row set-row-pad" id="footer-text">
+      <div class="col-lg-4 col-md-4 col-sm-4   col-lg-offset-1 col-md-offset-1 col-sm-offset-1 " data-scroll-reveal="enter from the bottom after 0.4s">
+        <h2 ><strong>Our Location </strong></h2>
+        <hr />
+        <div>
+          <h4>234/80 -UFG , New Street,</h4>
+          <h4>Switzerland.</h4>
+          <h4><strong>Call:</strong> + 67-098-907-1269 / 70 / 71 </h4>
+          <h4><strong>Email: </strong>info@yourdomain.com</h4>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4   col-lg-offset-1 col-md-offset-1 col-sm-offset-1" data-scroll-reveal="enter from the bottom after 0.4s">
+        <h2 ><strong>Social Conectivity </strong></h2>
+        <hr />
+        <div > <a href="#"> <img src="../assets/img/Social/facebook.png" alt="" /> </a> <a href="#"> <img src="../assets/img/Social/google-plus.png" alt="" /></a> <a href="#"> <img src="../assets/img/Social/twitter.png" alt="" /></a> </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+function vocabSet(str) {
+
+    if (str.length == 0) { 
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtHint").innerHTML = this.responseText;
+            }
+        };
+		let spn = document.getElementById("txtHint");
+		
+
+        xmlhttp.open("GET", "../assets/php/findVocab.php?q=" + str, true);
+        xmlhttp.send();
+    }
+}
+</script>
+<script>
+	function closeAllDefinitions() {
+		var elems = document.getElementsByClassName("definitions");
+		
+		for(var i = 0; i < elems.length; i++) {
+			elems[i].style.display="none";
+		}
+	}
+</script> 
+<script>
+	function closeWindow(index) {
+		var elems = document.getElementsByClassName("definitions");
+		let elem = elems[index];
+		elem.style.display="none";
+	}
+</script> 
+<script>
+function showDefinition(index) {
+	var elems = document.getElementsByClassName("definitions");
+	let elem = elems[index];
+	if(elem.style.display === "none") {
+		elem.style.display = "block";
+	} else {
+		elem.style.display = "none";
+	}
+	
+	var terms = document.getElementsByClassName("terms");
+	var term = terms[index];
+	var rect = term.getBoundingClientRect();
+	elem.style.marginTop = (rect.top-70)+"px";
+	let height = rect.bottom - rect.top;
+	elem.style.minHeight = height + "px";
+	
+	var defElems = document.getElementsByTagName("definitions");
+	var highest = 0;
+	  	for (var i = 0; i < defElems.length; i++) {
+			var zindex = defElems[i].style.zIndex;
+			if (zindex > highest)
+			{
+			  highest = zindex;
+			}
+		  }
+	elem.style.zIndex = (highest + 1);
+}
+</script> 
+<script>
+		$( document ).scroll( function () {
+			var $el = $( ".sidebar" );
+			//310 is the height of the bottom div
+			let btPixel = $(document).height() - $(window).height() - 310 + ($(window).height() * 0.05);
+			var isPositionFixed = ( $el.css( "position" ) == "fixed" );
+			if ( $( this ).scrollTop() > 70 ) {
+				$( ".sidebar" ).css( {
+					"position": "fixed",
+					"top": "0px",
+					"height": "95%",
+				} );
+			}
+			if ( $( this ).scrollTop() < 70 ) {
+				$( ".sidebar" ).css( {
+					"position": "absolute",
+					"top": "70px",
+					"height": "80%",
+				} );
+			}
+			if ( $( this ).scrollTop() > btPixel) {
+				$( ".sidebar" ).css( {
+					"position": "absolute",
+					"top": btPixel,
+				} );
+			}
+
+		} );
+	</script>
+<script>
+function hideDefinition(idname) {
+	document.getElementById("def-one").style.display = "none";
+	
+}
+</script> 
+<script>
+function openLeft() {
+    var i;
+    var x = document.getElementsByClassName("tabText");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    document.getElementById("leftTab").style.display = "block";
+	document.getElementById("leftButton").style.backgroundColor = "rgba(50,50,50,1.00)"
+	document.getElementById("leftButton").style.color = "white"
+	document.getElementById("rightButton").style.backgroundColor = "rgba(192,192,192,1.00)"
+	document.getElementById("rightButton").style.color = "black"
+}
+</script> 
+<script>
+function openRight() {
+    var i;
+    var x = document.getElementsByClassName("tabText");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    document.getElementById("rightTab").style.display = "block";  
+	document.getElementById("rightButton").style.backgroundColor = "rgba(50,50,50,1.00)"
+	document.getElementById("rightButton").style.color = "white"
+	document.getElementById("leftButton").style.backgroundColor = "rgba(192,192,192,1.00)"
+	document.getElementById("leftButton").style.color = "black"
+	var colors = ["MediumBlue", "DarkGreen", "DarkCyan", "LightSeaGreen", "MediumSeaGreen", "SteelBlue", "SkyBlue"];
+
+	var defs = document.getElementsByClassName("terms");
+	let colorIndex = 0;
+	// -- If you want the terms to be different colors --
+	/*
+	for (i = 0; i < defs.length; i++) {
+		colorIndex = i % (colors.length);
+		defs[i].style.color = colors[colorIndex];
+	}
+	*/
+}
+</script> 
+<script type="text/javascript">
+		  /*
+		  Changes the color of the nav bar text to black
+		  */
+			 var menu = document.getElementById("menuSecondary")
+			 var menuElems = document.getElementsByClassName("listColor")
+			  menu.addEventListener("mouseover", function() {
+				  
+				for(i = 0; i < menuElems.length; i++) {
+					  menuElems[i].style.color="black"
+				  }
+				  	  			  
+			 })
+		</script> 
+<script type="text/javascript">
+			/*
+			Changes the color of the nav bar text to white
+			*/
+			 var menu = document.getElementById("menuSecondary")
+			 var menuElems = document.getElementsByClassName("listColor")
+			  menu.addEventListener("mouseout", function() {
+				  
+				for(i = 0; i < menuElems.length; i++) {
+					  menuElems[i].style.color="white"
+				  }
+
+			 })
+		</script> 
+<script>
+	/* When the user clicks on the button, 
+	toggle between hiding and showing the dropdown content */
+	function myFunction() {
+		document.getElementById("main-dropdown").classList.toggle("show");
+	
+	}
+
+	// Close the dropdown if the user clicks outside of it
+	window.onclick = function(event) {
+	  if (!event.target.matches('.dropbtn')) {
+
+		var dropdowns = document.getElementsByClassName("dropdown-content");
+		var i;
+		for (i = 0; i < dropdowns.length; i++) {
+		  var openDropdown = dropdowns[i];
+		  if (openDropdown.classList.contains('show')) {
+			openDropdown.classList.remove('show');
+		  }
+		}
+		  
+	  }
+	}
+	</script> 
+
+<!--  Jquery Core Script --> 
+<script src="../assets/js/jquery-1.10.2.js"></script> 
+<!--  Core Bootstrap Script --> 
+<script src="../assets/js/bootstrap.js"></script> 
+<!--  Flexslider Scripts --> 
+<script src="../assets/js/jquery.flexslider.js"></script> 
+<!--  Scrolling Reveal Script --> 
+<script src="../assets/js/scrollReveal.js"></script> 
+<!--  Scroll Scripts --> 
+<script src="../assets/js/jquery.easing.min.js"></script> 
+<!--  Custom Scripts --> 
+<script src="../assets/js/custom.js"></script>
+</body>
+</html>
