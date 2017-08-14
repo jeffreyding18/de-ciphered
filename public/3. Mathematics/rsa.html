@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../2. Politics and Ethics/Linking-page-PnE.html">
+<link href="../css/bootstrap.css" rel="stylesheet"/>
+<!-- FONT AWESOME CSS -->
+<link href="../css/font-awesome.min.css" rel="stylesheet"/>
+<!-- FLEXSLIDER CSS -->
+<link href="../css/flexslider.css" rel="stylesheet"/>
+<!-- CUSTOM STYLE CSS -->
+<link href="../css/style.css" rel="stylesheet"/>
+<!-- Google	Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'/>
+
+	<script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+	</script>
+</head>
+
+<body>
+	<script src="../js/jquery-1.10.2.js"></script>
+	<div class="menuBackground">
+		<div class="navbar navbar-inverse navbar-absolute-top secondaryPage" id="menuSecondary">
+			<div class="container">
+				<div class="navbar-header"> </div>
+				<div class="navbar-collapse collapse move-me" id="colorUpdate">
+					<div class="nav navbar-nav navbar-left"><br>
+						<div class="list-element-topbar-left">
+							<button onclick="myFunction()" class="listColor dropdown-button dropbtn"> TOPICS </button>
+							<div id="main-dropdown" class="dropdown-content" style="margin-top:30px">
+								<div class="col-lg-2 col-md-2 col-sm-2 col-lg-offset-2">
+									<header> <a href="../1. Applications/Websites.html"> Websites </a> </header>
+									<ul>
+										<li class="menu-list"> <a href="../1. Applications/Websites.html#z1.0"> I. What is a website? </a> </li>
+										<li class="menu-list"> <a href="../1. Applications/Websites.html#z2.0"> II. Website Communication </a> </li>
+										<li class="menu-list"> <a href="../1. Applications/Websites.html#z3.0"> III. Security Risks </a> </li>
+										<li class="menu-list"> <a href="../1. Applications/Websites.html#z4.0"> IV. Common Attacks </a> </li>
+									</ul>
+									<header> <a href="../1. Applications/Non-Websites.html"> Non-Websites </a> </header>
+									<ul>
+										<li class="menu-list"> <a href="../1. Applications/Non-Websites.html#z2.0"> I. Common Vulnerabilities </a> </li>
+										<li class="menu-list"> <a href="../1. Applications/Non-Websites.html#z3.0"> II. The Cloud </a> </li>
+										<li class="menu-list"> <a href="../1. Applications/Non-Websites.html#z4.0"> III. WiFi Networks </a> </li>
+										<li class="menu-list"> <a href="../1. Applications/Non-Websites.html#z5.0"> IV. Industrial Data Storage </a> </li>
+									</ul>
+								</div>
+								<!--
+					<a href="#home">Home</a>
+					<a href="#about">About</a>
+					<a href="#contact">Contact</a>
+					-->
+							</div>
+						</div>
+					</div>
+					<ul class="nav navbar-nav navbar-right">
+						<li> <a  href="../index.html" class="listColor"> HOME </a> </li>
+						<li> <a href="../1. Applications/Linking-Page.html" class="listColor"> APPLICATION AND CONSEQUENCES </a> </li>
+						<li> <a href="../2. Politics and Ethics/Linking-page-PnE.html" class="listColor"> POLITICS AND ETHICS </a> </li>
+						<li> <a href="Linking-page-math.html" class="listColor"> MATHEMATICS </a> </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="main">
+		<div class="sidebar" id="scrolling-sidebar">
+			<div id="leftTab" class="tabText">
+				<h2> RSA</h2>
+				<ul>
+					<li> <a href="#z1.0"> 1. Introduction to RSA </a>
+						<ul class="inner-list">
+							<li> <a href="#z1.1"> I. Pre-requisites </a> </li>
+							<li> <a href="#z1.2"> II. Terms and Symbols </a> </li>
+						</ul>
+					</li>
+					<li> <a href="#z2.0"> 2. Conceptual Explanation </a>
+						<ul class="inner-list">
+							<li> <a href="#z2.1"> I. What is RSA? </a> </li>
+							<li> <a href="#z2.2"> II. The paper shredder analogy </a> </li>
+						</ul>
+					</li>
+					<li> <a href="#z3.0"> 3. Mathematical Explanation </a>
+						<ul class="inner-list">
+							<li> <a href="#z3.1"> I. What is RSA? </a>
+							</li>
+							<li> <a href="#z3.2"> II. Encryption </a> </li>
+							<li> <a href="#z3.3"> III. Decryption </a> </li>
+							<li> <a href="#z3.4"> IV. Additional steps for security </a> </li>
+						</ul>
+					</li>
+					<li> <a href="#z4.0"> 4. Example </a>
+						<ul class="inner-list">
+							<li> <a href="#z4.1"> I. Encryption </a>
+							</li>
+							<li> <a href="#z4.2"> II. Decryption </a> </li>
+						</ul>
+					</li>
+				</ul>
+				<div class="next-page">
+					<p> Next Topic: </p>
+					<button class="sidebar-table-button-nextPage" onClick="javascript:document.location='des.html'"> DES </button>
+				</div>
+				<div class="back-to-top">
+					<button class="sidebar-table-button-topOfPage" onClick="javascript:document.location='rsa.html'"> Back to top! </button>
+				</div>
+			</div>
+			<div id="rightTab" class="tabText" style="display:none">
+				<h2>Terms</h2>
+				<form>
+					<input id="vocab" type="text" name="search" placeholder="Search..." onKeyUp="vocabSet(this.value)" autocomplete="off">
+				</form>
+				<p id="txtHint"></p>
+				<!--
+      <h3> Click the terms to see definitions!</h3>
+
+      <ul>
+        <li class="terms">
+          <div class="term-click" onClick="showDefinition(0)"> HTML: </div>
+        </li>
+        <li class="terms">
+          <div class="term-click" onClick="showDefinition(1)"> CSS: </div>
+        </li>
+        <li class="terms">
+          <div class="term-click" onClick="showDefinition(2)"> HTTP(s): </div>
+        </li>
+        <li class="terms">
+          <div class="term-click" onClick="showDefinition(3)"> Web server: </div>
+        </li>
+        <li class="terms">
+          <div class="term-click" onClick="showDefinition(4)"> Cookies: </div>
+        </li>
+        <li class="terms">
+          <div class="term-click" onClick="showDefinition(5)"> Malware: </div>
+        </li>
+        <li class="terms">
+          <div class="term-click" onClick="showDefinition(6)"> ip address: </div>
+        </li>
+        <li class="terms">
+          <div class="term-click" onClick="showDefinition(7)"> Domain name: </div>
+        </li>
+      </ul>
+      <button onClick="closeAllDefinitions()"> Close all open definitions </button>
+      -->
+			</div>
+			<div class="sidebar-button-holder">
+				<button class="sidebar-buttons" onclick="openLeft()" id="leftButton">Contents</button>
+				<button class="sidebar-buttons" onclick="openRight()" id="rightButton">Definitions</button>
+			</div>
+		</div>
+
+		<div class="text-container">
+			<div class="text">
+				<h1> RSA</h1>
+				<div class="text-body">
+					<h3 id="z1.0"> What is RSA? </h3>
+					<p> RSA is an encryption algorithm first introduced forty years ago, in 1977. RSA stands for the three people who created the algorithm: Ron Rivest, Adi Shamir and Leonard Adleman. Although it was created so long ago, it is still used today for high-level security. It is slower than some other encryption methods, but considered one of the most secure methods of encrypting.
+					</p>
+
+					<h4 id="z1.1"> Pre-Requisites </h4>
+					<p> In order to understand RSA, you're going to need an understanding of the follow topics: <br/>Intro to Encryption <br/>Diffie-Hellman Key Exchange <br/>Asymmetric Encryption </p>
+					<h4 id="z1.2"> Terms and Symbols </h4>
+					<p style="text-align: left !important">
+					$$\phi = phi$$
+					$$ mod = modulus$$
+
+					<h3 id="z2.0"> Conceptual Explanation </h3>
+					<h4 id="z2.1"> What is RSA? </h4>
+					<p> RSA encryption is a standard asymmetric encryption system. It’s slower than other modern encryption methods, but it is considered one of the most powerful methods of safeguarding information. It primarily uses the idea of a trapdoor one way function - computing an output is easy, but working backward is realistically impossible (or very, very, <b> very </b> hard) unless you know where the trapdoor is. </p>
+					<h4 id="z2.2"> The paper shredder analogy </h4>
+					<p> Imagine it like this: </p>
+					<p>
+						Alice is working with Bob on a competitive group project, and needs to communicate with him. Eve, however, is on an opposing team, and does everything in her power to stop the two from communicating, interrupting conversations and ripping up letters.
+						So Bob and Alice design a plan. </p>
+					<p>
+						Bob goes to the store and buys a paper-shredder. Being an engineer at heart, he opens up the shredder, and figures out exactly how it shreds paper. It gets to the point where he can shred a paper and then put it back together.
+					<p>
+						Alice doesn’t know the shredder like Bob, but she knows that Bob knows. Eve also knows, but cannot get to the shredder.
+					<p>
+						So whenever Alice needs to communicate with Bob, she drops a letter into his shredder. Eve can see the scraps, but doesn’t know how to put them back together. Only Bob can figure out what the letter says, as only he knows how the shredder works.
+					<p>
+						Now, this only works one way. Eve still intercepts and letters that Bob sends Alice. But if Alice were to get a different shredder of her own...
+					<p>
+						Well, you get the picture.
+					<p>
+						This is, in a nutshell, how RSA encryption works. Bob’s public key is like his paper shredder, a tool that anyone can use to encrypt (shred) their message, and his private key is Bob’s knowlege of how the shredder shreds paper. Anyone can encrypt, but only Bob can decrypt.
+					</p>
+
+
+					<h3 id="z3.0"> Mathematical Explanation </h3>
+					<p> Pre-requisites: <br/> Understanding of modular mathematics</p>
+					<h4 id="z3.1"> What is RSA? </h4>
+					<p> RSA encryption is a standard asymmetric encryption system. It’s slower than other modern encryption methods, but it is considered one of the most powerful methods of safeguarding information. RSA’s primary form of security is through its one way function. It ensures that decryption is practically impossible (with a large enough key) without knowing the private key. </p>
+					<p> The actual one way function is based on prime factorization. Multiplying two prime numbers together is an easy operation for a computer to do, but attempting to factor the result is practically impossible (for a big enough number). Thus, the process of encrypting the plaintext (the original message) is easy to do, while decrypting the ciphertext (encrypted message) is extremely hard without having a “trapdoor”. </p>
+					<p> RSA also is known as a public-key cryptosystem. In other words, there is a public key that anyone can use to encrypt a message and a single private key to decrypt all messages. Imagine this situation: Alice and Bob want to communicate with each other, but they don’t want anyone to see the messages they’re sending. However, Eve is monitoring every channel that the message could be sent over. Email, telephone, fax (people still use this…?), you name it. With RSA, Alice can publish her public key for everyone to use. Bob can then encrypt his message using Alice’s public key and send it back. Importantly, the encryption is a one way function, so knowing Alice’s public key does not help Eve break the code. When Alice receives the message, she can decrypt it using her private key.
+					</p>
+					<h2 id="z3.2"> Encryption </h2>
+					<p> Now, how does RSA actually work? The entire process will be broken down into two sections: Encrypt and Decryption. However, there will be equations and theorems used that are not proved in the document. For more in-depth proofs, refer to the links. </p>
+					<p>
+						<div class="steps">Step 1:</div>
+						<br/>
+						<blockquote>To begin, pick two large prime numbers. Generally, the minimum size of each prime number should be 1024-bits. These prime numbers will be know as <b>p</b> and <b>q</b>.</blockquote>
+
+					</p>
+					<p>
+						<div class="steps">Step 2:</div>
+						<br/>
+						<blockquote>Next, we will find the public modulus. This will be known as <strong>n</strong>.
+							<div class="equations">
+								$$n = p * q$$
+							</div>
+
+					</p>
+
+					<p>
+						Now that we have a public modulus, we will need a public key. Before we can find the public key, however, we first must understand Euler's totient function. </p>
+					<p>
+						Euler’s totient function gives the number of integers between the number, n, and 1 that are relative prime to n. For example: $$\phi (9) = 6$$ because 1, 2, 4, 5, 7, 8 are relatively prime to 9, while 3, 6, 9 are not. In other words - 1, 2, 4, 5, 7, 8 are the totatives of 9. </blockquote>
+					</p>
+					<p>
+						<br/>
+						<div class="steps">Step 3:</div>
+						<br/>
+						<blockquote>Using Euler's totient function, we will find the public key, <strong>e</strong>. However, there is one catch. <strong>e</strong> must be a co-prime (or relative prime) of \(\phi (n)\).
+					</p>
+					<p>
+						From Euler's totient function, we can prove: $$ \phi (n) = (p-1) * (q-1) $$ Thus, our public key, <strong>e</strong>, must be relatively prime to \( (p-1) * (q-1) \).</blockquote>
+					</p>
+					<p>
+						<div class="steps">Step 4:</div>
+						<br/>
+						<blockquote> We now have all the components to encrypt the message. The public modulus and public key compose the segment that will be made available to anyone. With these two pieces of information, anyone can encrypt their information.
+					</p>
+					<p>
+						To encrypt an equation, we simply use the following equation: $$C = M^e (mod n)$$ Where: <br/> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<strong>M</strong> is the plaintext <br/> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<strong>e</strong> is the public key <br/> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<strong>n</strong> is the public modulus <br/> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<strong>C</strong> is the ciphertext</blockquote>
+					</p>
+
+					<h2 id="z3.3"> Decryption </h2>
+					<p> To decrypt, we must approach the ciphertext from a different angle. Due to the encryption process being a one-way function, we cannot simply work backward. This is where knowing the initial prime numbers comes in. In fact, the one-way function is formed by the prime numbers. Multiplying two prime numbers to get a public modulus is simple. However, attempting to factor the result takes years even for the most powerful computers (ignoring quantum computing). Thus, only the created of the current instance can generate a private key - they are the only ones who know the original two primes. </p>
+
+					<p>
+						<div class="steps">Step 1:</div>
+						<br/>
+						<blockquote> Using the original prime numbers, we will now find a trapdoor function. This will allow us to decrypt the original message. The equation: $$e*d = 1 \quad (mod \phi (n)) $$ <i>An important thing to note -- the modulus used above refers to the entire equation, not just the right hand side.</i>
+					</p>
+					<p style="text-align:center">
+						Recall that \(\phi (n) \)is simply \((p-1) * (q-1) \).
+					</p>
+					<p>
+						However, solving for <strong>d</strong> can get a little bit tricky. To do so, we must use the Extended Euclidean Algorithm (EEA). The EEA will find values for x and y to satisfy the following: $$ ax + by = gcd(a, b) $$ In the case of RSA, \(a = e\), \(b = \phi (n)\), and \(x=d\). $$ e * d + \phi(n) y = gcd(a, b) $$ By applying modulo \(\phi (n) \) to the equation, we get: $$ e * d = 1 \quad mod (\phi (n)) $$ For a more in-depth explanation and demonstration, please refer to the following: <a href=""> Extended Euclidean Algorithm</a>
+						<p>
+
+							After we find <strong>d</strong>, we have a method to decrypt any message that is encrypting using our public key and public modulus. For a more in-depth explanation of the previous equation, refer to "Where does d come from?"
+
+							</blockquote>
+						</p>
+						<p>
+							<div class="steps">Step 2:</div>
+							<br/>
+							<blockquote>
+								With <strong>d</strong>, decryption is simply an equation. $$ M = C^d \quad mod (n) $$
+							</blockquote>
+						</p>
+						<h4 id="z3.4"> Additional steps for security</h4>
+						<p>
+							One of the most important steps to a secure RSA encryption is the use of padding. "Textbook RSA" is the description of RSA purely with its mathematical basis (the steps shown above). However, industrial standard RSA utilizes padding to highten security and add an element of randomness.
+						</p>
+						<p>
+							The nature of RSA is that the same message encrypted will be the same each time. Therefore, an attack could launch a <em>chosen plaintext attack</em>. In this, an attacker would attempt to guess the contents of my message and encrypt their guess, matching it up with my encrypted message. With trial and error combined with smart guesses, an attacker may be able to deduce the contents of my message.
+						</p>
+						<p>
+							Padding simply adds a random string/set of integers to the message <em>each time</em> the message is encrypted. Thus, each message is distinct and has an element of randomness. By using padding, RSA counters <em>chosen plaintext attacks</em>.
+						</p>
+						<h3 id="z4.0"> Worked Example</h3>
+						<p>
+							Now we'll work through an example RSA encryption process. We'll encrypt the phrase "Hello World!" and then decrypt it.
+						</p>
+						<h2 id="z4.1"> Encryption </h2>
+						<p>
+							<div class="steps"> Step one: </div>
+							<br/>
+							<blockquote>
+								To begin, we have to turn out phrase into something that we can application mathematical formulae to. In our case, we will simply use ASCII. Thus, the letter "H" will become 072 and the letter "e" will become 101, and so forth. "Hello World!" becomes:
+						</p>
+						<p style="text-align: center; font-size: 20px"> 072 101 108 108 111 032 087 111 114 108 100 033
+
+							</blockquote>
+						</p>
+						<p>
+							<div class="steps"> Step two: </div>
+							<br/>
+							<blockquote>
+								Next, we have to generate our prime numbers and create our public key. In this example, we will use small prime numbers for the purpose of demonstration, but in real RSA, these primes will be 1024+ bits long. Our primes:
+						</p>
+						<p>
+							$$ p = 13$$ $$ q = 23$$
+
+						</p>
+						<p>
+							Next, we will create our public modulus: $$ n = p * q$$ $$ n = 13 * 23$$ $$ n = 299$$
+
+							</blockquote>
+						</p>
+						<p>
+							<div class="steps"> Step three: </div>
+							<br/>
+							<blockquote>
+								Now we will have to find the public key, e. For RSA, the public key <strong>must </strong> be co-prime or relatively prime to \(\phi (n)\).
+						</p>
+						<p>
+							Now, as we know from Euler's totient function: $$ \phi (p * q) = (p-1) * (q-1) $$ Thus: $$ \phi (n) = (p-1) * (q-1)$$ $$ \phi (n) = (12 * 22)$$ $$ \phi (n) = 264$$ Now, all that's left is to pick a public key, e, that is relatively prime to 264. For this example: $$ e = 7 $$
+
+							</blockquote>
+						</p>
+						<p>
+							<div class="steps"> Step four: </div>
+							<br/>
+							<blockquote>
+								Now all that's left is to encrypt. Let's review the variables we have so far: $$ p = 13 $$ $$ q = 23 $$ $$ e = 7 $$ $$ n = 299 $$ $$ \phi (n) = 264 $$ In order to encrypt our message, we will simply use the formula presented earlier. $$C = M^e \quad mod (n)$$ For each letter, we will apply this formula. For example with the letter "H" (ASCII --> 072): $$C = 072^7 \quad mod (299) $$ $$C = 10030613004288 \quad mod (299) $$ $$C = 71 $$ After applying the same operation to the rest of the values, we get:
+
+								<p style="text-align: center; font-size: 25px"> <br/> 71 257 225 225 84 280 282 84 114 225 35 175 </p>
+
+								<br/> And there we are! That's our encrypted message. Now onto the hard part...
+
+							</blockquote>
+						</p>
+						<h2 id="z4.2"> Decryption</h2>
+
+						<p>
+							<div class="steps"> Step one: </div>
+							<br/>
+							<blockquote>
+							To decrypt, we need one crucial number. This is known as the private key, d. To find this, we must apply the Extended Euclidean Algorithm, as mentioned above.
+							$$ ax + by = gcd(a, b) $$
+							Where  \(a = e\), \(b = \phi (n)\), and \(x=d\).
+
+						<p>
+							First apply the normal Euclidean Algorithm:
+							$$ 264 = 37(7) + 5$$
+							$$ 7 = 1(5) + 2$$
+							$$ 5 = 2(2) + 1$$
+
+							And next, apply the Extended version. In this, we go through each iteration and plug in values. First, set the last equation equal to one.
+
+							$$1 = 5-2(2)$$
+
+							Next, substitute in the solution of "2" from the previous equation.
+							$$1 = 5 - 2(7-1(5))$$
+
+							And so forth...
+							$$1 = (264 - 37(7)) - 2(7 - 1(264 - 37(7)))$$
+
+							Simplify (combining in terms of 264 and 37)
+							$$1 = 264 - 37(7) - 2(7 - 264 + 37(7))$$
+							$$1 = 264 - 37(7) - 2(38(7)  - 264)$$
+							$$1 = 264 - 37(7) - 76(7) + 2(264)$$
+
+							At this point, we apply modulo (264) to both sides, effectively remove all instances of 264 on the right side. Because we have applied modulo (264), adding any multiple of 264 results in the same number.
+
+							$$1 = -37(7) - 76(7) \quad mod(264)$$
+							$$1 = -113(7) \quad mod(264)$$
+							Now looking back at the initial equation:
+							$$e * d = 1 \quad mod(264)$$
+							Because:
+							$$e = 7$$
+							Then:
+							$$d = -113$$
+							But, d cannot be negative. Therefore, we add multiples of 264 until the result is positive. This will remain effectively the same, as we are applying modulo (264), and thus adding any multiple of 264 will keep the answer the same.
+
+							Finally:
+							$$d = -113 + 264$$
+							$$d = 151$$
+
+							</blockquote>
+						</p>
+						<p>
+							<div class="steps"> Step two: </div>
+							<br/>
+							<blockquote>
+							Now that we know <strong>d</strong>, we simply have to utilize the decryption equation:
+							$$ M = C^d \quad mod(n)$$
+							For example, with the first encrypted letter:
+							$$ C = 71$$
+							$$ M = 71^{151} \quad mod(299)$$
+							$$ M = 72$$
+
+							Now if you look back at the original set of ASCII letters, 72 was indeed our first letter, "H".
+								</p>
+
+						<p>
+							Applying this to the rest of the encrypted phrase, we get right back to our original message:
+								</p>
+						<p style="text-align: center; font-size: 25px"> <br/> Hello World!
+								</p>
+
+							</blockquote>
+						</p>
+						<div class="next-page">
+							<button class="next-page-button" onClick="javascript:document.location='Non-Websites.html'"> Next Topic: NON-WEBSITES </button>
+						</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-template">
+			<div class="row set-row-pad" id="footer-text">
+				<div class="col-lg-4 col-md-4 col-sm-4   col-lg-offset-1 col-md-offset-1 col-sm-offset-1 " data-scroll-reveal="enter from the bottom after 0.4s">
+					<h2><strong>Our Location </strong></h2>
+					<hr/>
+					<div>
+						<h4>234/80 -UFG , New Street,</h4>
+						<h4>Switzerland.</h4>
+						<h4><strong>Call:</strong> + 67-098-907-1269 / 70 / 71 </h4>
+						<h4><strong>Email: </strong>info@yourdomain.com</h4>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4   col-lg-offset-1 col-md-offset-1 col-sm-offset-1" data-scroll-reveal="enter from the bottom after 0.4s">
+					<h2><strong>Social Conectivity </strong></h2>
+					<hr/>
+					<div> <a href="#"> <img src="../img/Social/facebook.png" alt="" /> </a> <a href="#"> <img src="../img/Social/google-plus.png" alt="" /></a> <a href="#"> <img src="../img/Social/twitter.png" alt="" /></a> </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		function vocabSet( str ) {
+
+			if ( str.length == 0 ) {
+				document.getElementById( "txtHint" ).innerHTML = "";
+				return;
+			} else {
+				var xmlhttp = new XMLHttpRequest();
+				xmlhttp.onreadystatechange = function () {
+					if ( this.readyState == 4 && this.status == 200 ) {
+						document.getElementById( "txtHint" ).innerHTML = this.responseText;
+					}
+				};
+				let spn = document.getElementById( "txtHint" );
+
+
+				xmlhttp.open( "GET", "../php/findVocab.php?q=" + str, true );
+				xmlhttp.send();
+			}
+		}
+	</script>
+	<script>
+		function closeAllDefinitions() {
+			var elems = document.getElementsByClassName( "definitions" );
+
+			for ( var i = 0; i < elems.length; i++ ) {
+				elems[ i ].style.display = "none";
+			}
+		}
+	</script>
+	<script>
+		function closeWindow( index ) {
+			var elems = document.getElementsByClassName( "definitions" );
+			let elem = elems[ index ];
+			elem.style.display = "none";
+		}
+	</script>
+	<script>
+		function showDefinition( index ) {
+			var elems = document.getElementsByClassName( "definitions" );
+			let elem = elems[ index ];
+			if ( elem.style.display === "none" ) {
+				elem.style.display = "block";
+			} else {
+				elem.style.display = "none";
+			}
+
+			var terms = document.getElementsByClassName( "terms" );
+			var term = terms[ index ];
+			var rect = term.getBoundingClientRect();
+			elem.style.marginTop = ( rect.top - 70 ) + "px";
+			let height = rect.bottom - rect.top;
+			elem.style.minHeight = height + "px";
+
+			var defElems = document.getElementsByTagName( "definitions" );
+			var highest = 0;
+			for ( var i = 0; i < defElems.length; i++ ) {
+				var zindex = defElems[ i ].style.zIndex;
+				if ( zindex > highest ) {
+					highest = zindex;
+				}
+			}
+			elem.style.zIndex = ( highest + 1 );
+		}
+	</script>
+	<script>
+		$( document ).scroll( function () {
+			var $el = $( ".sidebar" );
+			//310 is the height of the bottom div
+			let btPixel = $(document).height() - $(window).height() - 310 + ($(window).height() * 0.05);
+			var isPositionFixed = ( $el.css( "position" ) == "fixed" );
+			if ( $( this ).scrollTop() > 70 ) {
+				$( ".sidebar" ).css( {
+					"position": "fixed",
+					"top": "0px",
+					"height": "95%",
+				} );
+			}
+			if ( $( this ).scrollTop() < 70 ) {
+				$( ".sidebar" ).css( {
+					"position": "absolute",
+					"top": "70px",
+					"height": "80%",
+				} );
+			}
+			if ( $( this ).scrollTop() > btPixel) {
+				$( ".sidebar" ).css( {
+					"position": "absolute",
+					"top": btPixel,
+				} );
+			}
+
+		} );
+	</script>
+	<script>
+		function hideDefinition( idname ) {
+			document.getElementById( "def-one" ).style.display = "none";
+
+		}
+	</script>
+	<script>
+		function openLeft() {
+			var i;
+			var x = document.getElementsByClassName( "tabText" );
+			for ( i = 0; i < x.length; i++ ) {
+				x[ i ].style.display = "none";
+			}
+			document.getElementById( "leftTab" ).style.display = "block";
+			document.getElementById( "leftButton" ).style.backgroundColor = "rgba(50,50,50,1.00)"
+			document.getElementById( "leftButton" ).style.color = "white"
+			document.getElementById( "rightButton" ).style.backgroundColor = "rgba(192,192,192,1.00)"
+			document.getElementById( "rightButton" ).style.color = "black"
+		}
+	</script>
+	<script>
+		function openRight() {
+			var i;
+			var x = document.getElementsByClassName( "tabText" );
+			for ( i = 0; i < x.length; i++ ) {
+				x[ i ].style.display = "none";
+			}
+			document.getElementById( "rightTab" ).style.display = "block";
+			document.getElementById( "rightButton" ).style.backgroundColor = "rgba(50,50,50,1.00)"
+			document.getElementById( "rightButton" ).style.color = "white"
+			document.getElementById( "leftButton" ).style.backgroundColor = "rgba(192,192,192,1.00)"
+			document.getElementById( "leftButton" ).style.color = "black"
+			var colors = [ "MediumBlue", "DarkGreen", "DarkCyan", "LightSeaGreen", "MediumSeaGreen", "SteelBlue", "SkyBlue" ];
+
+			var defs = document.getElementsByClassName( "terms" );
+			let colorIndex = 0;
+			// -- If you want the terms to be different colors --
+			/*
+			for (i = 0; i < defs.length; i++) {
+				colorIndex = i % (colors.length);
+				defs[i].style.color = colors[colorIndex];
+			}
+			*/
+		}
+	</script>
+	<script type="text/javascript">
+		/*
+				  Changes the color of the nav bar text to black
+				  */
+		var menu = document.getElementById( "menuSecondary" )
+		var menuElems = document.getElementsByClassName( "listColor" )
+		menu.addEventListener( "mouseover", function () {
+
+			for ( i = 0; i < menuElems.length; i++ ) {
+				menuElems[ i ].style.color = "black"
+			}
+
+		} )
+	</script>
+	<script type="text/javascript">
+		/*
+					Changes the color of the nav bar text to white
+					*/
+		var menu = document.getElementById( "menuSecondary" )
+		var menuElems = document.getElementsByClassName( "listColor" )
+		menu.addEventListener( "mouseout", function () {
+
+			for ( i = 0; i < menuElems.length; i++ ) {
+				menuElems[ i ].style.color = "white"
+			}
+
+		} )
+	</script>
+	<script>
+		/* When the user clicks on the button,
+			toggle between hiding and showing the dropdown content */
+		function myFunction() {
+			document.getElementById( "main-dropdown" ).classList.toggle( "show" );
+
+		}
+
+		// Close the dropdown if the user clicks outside of it
+		window.onclick = function ( event ) {
+			if ( !event.target.matches( '.dropbtn' ) ) {
+
+				var dropdowns = document.getElementsByClassName( "dropdown-content" );
+				var i;
+				for ( i = 0; i < dropdowns.length; i++ ) {
+					var openDropdown = dropdowns[ i ];
+					if ( openDropdown.classList.contains( 'show' ) ) {
+						openDropdown.classList.remove( 'show' );
+					}
+				}
+
+			}
+		}
+	</script>
+
+	<!--  Jquery Core Script -->
+	<script src="../js/jquery-1.10.2.js"></script>
+	<!--  Core Bootstrap Script -->
+	<script src="../js/bootstrap.js"></script>
+	<!--  Flexslider Scripts -->
+	<script src="../js/jquery.flexslider.js"></script>
+	<!--  Scrolling Reveal Script -->
+	<script src="../js/scrollReveal.js"></script>
+	<!--  Scroll Scripts -->
+	<script src="../js/jquery.easing.min.js"></script>
+	<!--  Custom Scripts -->
+	<script src="../js/custom.js"></script>
+</body>
+
+</html>
