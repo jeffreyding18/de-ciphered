@@ -886,69 +886,29 @@ We begin with our initial key, K. This is a direct text/hexadecimal to binary tr
 		</div>
 	</div>
 	<script>
-		function vocabSet( str ) {
-
-			if ( str.length == 0 ) {
-				document.getElementById( "txtHint" ).innerHTML = "";
-				return;
-			} else {
-				var xmlhttp = new XMLHttpRequest();
-				xmlhttp.onreadystatechange = function () {
-					if ( this.readyState == 4 && this.status == 200 ) {
-						document.getElementById( "txtHint" ).innerHTML = this.responseText;
-					}
-				};
-				let spn = document.getElementById( "txtHint" );
-
-
-				xmlhttp.open( "GET", "../php/findVocab.php?q=" + str, true );
-				xmlhttp.send();
-			}
-		}
-	</script>
-	<script>
-		function closeAllDefinitions() {
-			var elems = document.getElementsByClassName( "definitions" );
-
-			for ( var i = 0; i < elems.length; i++ ) {
-				elems[ i ].style.display = "none";
-			}
-		}
-	</script>
-	<script>
-		function closeWindow( index ) {
-			var elems = document.getElementsByClassName( "definitions" );
-			let elem = elems[ index ];
-			elem.style.display = "none";
-		}
-	</script>
-	<script>
-		function showDefinition( index ) {
-			var elems = document.getElementsByClassName( "definitions" );
-			let elem = elems[ index ];
-			if ( elem.style.display === "none" ) {
-				elem.style.display = "block";
-			} else {
-				elem.style.display = "none";
-			}
-
-			var terms = document.getElementsByClassName( "terms" );
-			var term = terms[ index ];
-			var rect = term.getBoundingClientRect();
-			elem.style.marginTop = ( rect.top - 70 ) + "px";
-			let height = rect.bottom - rect.top;
-			elem.style.minHeight = height + "px";
-
-			var defElems = document.getElementsByTagName( "definitions" );
-			var highest = 0;
-			for ( var i = 0; i < defElems.length; i++ ) {
-				var zindex = defElems[ i ].style.zIndex;
-				if ( zindex > highest ) {
-					highest = zindex;
-				}
-			}
-			elem.style.zIndex = ( highest + 1 );
-		}
+	function vocabSet(str) {
+	  if (str.length == 0) {
+	      document.getElementById("txtHint").innerHTML = "";
+	      return;
+	  } else {
+	    $(document).ready(function() {
+	      //fetch text file
+	      $.get('../txt/terms.txt', function(terms) {
+	        $.get("../txt/definitions.txt", function(defs) {
+	          //split on new lines
+	          var termArray = terms.split("\n");
+	          var defArray = defs.split("\n");
+	          document.getElementById("txtHint").innerHTML = "";
+	          for(i = 0; i < termArray.length; i++) {
+	            if(termArray[i].toLowerCase().includes(str) || defArray[i].toLowerCase().includes(str)) {
+	              document.getElementById("txtHint").innerHTML += ("<h4><b>" + termArray[i] + "</b></h4><p>" + defArray[i] + "</p><br>");
+	            }
+	          }
+	        });
+	      });
+	  	});
+		};
+	}
 	</script>
 	<script>
 		$( document ).scroll( function () {
@@ -979,51 +939,7 @@ We begin with our initial key, K. This is a direct text/hexadecimal to binary tr
 
 		} );
 	</script>
-	<script>
-		function hideDefinition( idname ) {
-			document.getElementById( "def-one" ).style.display = "none";
 
-		}
-	</script>
-	<script>
-		function openLeft() {
-			var i;
-			var x = document.getElementsByClassName( "tabText" );
-			for ( i = 0; i < x.length; i++ ) {
-				x[ i ].style.display = "none";
-			}
-			document.getElementById( "leftTab" ).style.display = "block";
-			document.getElementById( "leftButton" ).style.backgroundColor = "rgba(50,50,50,1.00)"
-			document.getElementById( "leftButton" ).style.color = "white"
-			document.getElementById( "rightButton" ).style.backgroundColor = "rgba(192,192,192,1.00)"
-			document.getElementById( "rightButton" ).style.color = "black"
-		}
-	</script>
-	<script>
-		function openRight() {
-			var i;
-			var x = document.getElementsByClassName( "tabText" );
-			for ( i = 0; i < x.length; i++ ) {
-				x[ i ].style.display = "none";
-			}
-			document.getElementById( "rightTab" ).style.display = "block";
-			document.getElementById( "rightButton" ).style.backgroundColor = "rgba(50,50,50,1.00)"
-			document.getElementById( "rightButton" ).style.color = "white"
-			document.getElementById( "leftButton" ).style.backgroundColor = "rgba(192,192,192,1.00)"
-			document.getElementById( "leftButton" ).style.color = "black"
-			var colors = [ "MediumBlue", "DarkGreen", "DarkCyan", "LightSeaGreen", "MediumSeaGreen", "SteelBlue", "SkyBlue" ];
-
-			var defs = document.getElementsByClassName( "terms" );
-			let colorIndex = 0;
-			// -- If you want the terms to be different colors --
-			/*
-			for (i = 0; i < defs.length; i++) {
-				colorIndex = i % (colors.length);
-				defs[i].style.color = colors[colorIndex];
-			}
-			*/
-		}
-	</script>
 	<script type="text/javascript">
 		/*
 				  Changes the color of the nav bar text to black

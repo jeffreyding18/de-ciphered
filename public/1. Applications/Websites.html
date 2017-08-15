@@ -13,6 +13,8 @@
 <link href="../css/style.css" rel="stylesheet" />
 <!-- Google	Fonts -->
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css' />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
 </head>
 <body>
 <script src="../js/jquery-1.10.2.js"></script>
@@ -173,24 +175,30 @@
   </div>
 </div>
 <script>
+</script>
+<script>
 function vocabSet(str) {
-
-    if (str.length == 0) {
-        document.getElementById("txtHint").innerHTML = "";
-        return;
-    } else {
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("txtHint").innerHTML = this.responseText;
+  if (str.length == 0) {
+      document.getElementById("txtHint").innerHTML = "";
+      return;
+  } else {
+    $(document).ready(function() {
+      //fetch text file
+      $.get('../txt/terms.txt', function(terms) {
+        $.get("../txt/definitions.txt", function(defs) {
+          //split on new lines
+          var termArray = terms.split("\n");
+          var defArray = defs.split("\n");
+          document.getElementById("txtHint").innerHTML = "";
+          for(i = 0; i < termArray.length; i++) {
+            if(termArray[i].toLowerCase().includes(str) || defArray[i].toLowerCase().includes(str)) {
+              document.getElementById("txtHint").innerHTML += ("<h4><b>" + termArray[i] + "</b></h4><p>" + defArray[i] + "</p><br>");
             }
-        };
-		let spn = document.getElementById("txtHint");
-
-
-        xmlhttp.open("GET", "../php/findVocab.php?q=" + str, true);
-        xmlhttp.send();
-    }
+          }
+        });
+      });
+  	});
+	};
 }
 </script>
 <script>

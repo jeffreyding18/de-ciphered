@@ -423,25 +423,29 @@
 		</div>
 	</div>
 	<script>
-		function vocabSet( str ) {
-
-			if ( str.length == 0 ) {
-				document.getElementById( "txtHint" ).innerHTML = "";
-				return;
-			} else {
-				var xmlhttp = new XMLHttpRequest();
-				xmlhttp.onreadystatechange = function () {
-					if ( this.readyState == 4 && this.status == 200 ) {
-						document.getElementById( "txtHint" ).innerHTML = this.responseText;
-					}
-				};
-				let spn = document.getElementById( "txtHint" );
-
-
-				xmlhttp.open( "GET", "../php/findVocab.php?q=" + str, true );
-				xmlhttp.send();
-			}
-		}
+	function vocabSet(str) {
+	  if (str.length == 0) {
+	      document.getElementById("txtHint").innerHTML = "";
+	      return;
+	  } else {
+	    $(document).ready(function() {
+	      //fetch text file
+	      $.get('../txt/terms.txt', function(terms) {
+	        $.get("../txt/definitions.txt", function(defs) {
+	          //split on new lines
+	          var termArray = terms.split("\n");
+	          var defArray = defs.split("\n");
+	          document.getElementById("txtHint").innerHTML = "";
+	          for(i = 0; i < termArray.length; i++) {
+	            if(termArray[i].toLowerCase().includes(str) || defArray[i].toLowerCase().includes(str)) {
+	              document.getElementById("txtHint").innerHTML += ("<h4><b>" + termArray[i] + "</b></h4><p>" + defArray[i] + "</p><br>");
+	            }
+	          }
+	        });
+	      });
+	  	});
+		};
+	}
 	</script>
 	<script>
 		function closeAllDefinitions() {

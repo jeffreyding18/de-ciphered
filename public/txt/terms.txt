@@ -1,0 +1,70 @@
+HTML
+CSS
+Website
+Browser
+Web server
+HTTP
+HTTPS
+URL
+Bit
+Byte (kilo, KB, Mega, MB, Giga, GB Peta, PB)
+Cookies
+Virus
+Hacker
+CMS
+Administrator (system administrator)
+Access Control
+Software
+Hardware
+Wifi (Wi-Fi)
+Exploit kit
+Malware (Malware)
+DoS (Denial of Service)
+Bitwise XOr
+Domain name
+IP Address
+Encryption
+The Cloud
+Cloud computing
+Cloud storage
+Hard drive
+HDD (Hard Disk Drive)
+SSD (Solid State Drive)
+WPA
+Data Center
+Password
+Hash
+Data breach
+VPN
+Data
+Password Manager
+Net Neutrality
+ISP
+FCC
+Piracy
+DMCA
+Fair Use
+Public modulus
+Public key
+Ciphertext
+Private key
+Padding
+Plaintext
+Prime number
+Coprime number (co-prime, relatively prime)
+Integer
+Block
+Block Cipher
+Feistel structure
+Subkey
+Permutation
+Subkey generation
+Key schedule
+Key length(key size)
+Hexadecimal
+Array
+Binary
+Round key
+ShiftRows
+Irreducible polynomial
+Cipher key

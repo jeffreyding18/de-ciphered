@@ -1,0 +1,70 @@
+Programing language that creates the layout and the objects that are placed on a website
+Programing language that takes HTML objects and sets their traits (color, size, ect.)
+A collection of documents and files that tell the computer what to show on your screen.
+Reads a website's code and displays it in a way that's easy to understand
+A container for all a website's code - browsers access websites by sending a view request to the server.
+A request to a server to access a webpage
+A version of HTTP that encrypts each web server request.
+A URL is a Uniform Resource Locator, basically an address that lets a browser know where it is on the internet.
+The smallest piece of data on a computer, either a 1 or a 0.
+A collection of 8 bits.
+A storage bin on your computer - where a website keeps all its relevant information for you.
+A virus is a kind of malware designed to replicate and spread to other computers
+A person using a computer to illegally access/copy data
+A CMS, or Content Management System, is an application that helps a user to create and modify digital content
+Person responsible for the upkeep of computer systems (usually servers)
+Selective restriction/whitelisting of access to a website/application
+Grouped data in a computer to perform a purpose (like an application)
+What is inside your computer, e.g. it's physical components (hard-drive, fan, keyboard, ect.)
+The radio frequency that connects your computer to a network
+A tool hackers use to compromise a website and then spread malware to whoever visits said website.
+Software used to attack your computer or/and access your information
+null
+A system your computer uses to compare bits and output another bits. (If the computer sees two 1s or two 0s, it returns 0. If it sees one 1 and one 0, it returns 1)
+A part of a network address that identifies the the website. For example, google.com or facebook.com
+Your computer's identifier
+A method of protecting data from hacking by scrambling it.
+A location (usually not physically near it's users), used to store or process information.
+Connecting computers together through a remote network to conglomerate power
+Secure external file storage
+A self-contained piece of hardware that your computer stores information too.
+A hard drive that uses a mechanical arm to read and write information from your computer. Usually slow.
+A hard drive that uses microchips (with no moving parts) to read and write information from the computer. Much faster than an HDD.
+WPA< or Wi-FI Protected Access, are two security protocols that protect WIFI from attacks.
+A data center is a large group of computer servers used for data storage, processing, and distribution.
+A key to access data from a company's servers
+An easy way for computers to securely check if two inputs are the same
+An successful attempt to steal data from a computer/network. The largest of these can compromise the accounts of millions of individuals.
+A Virtual Private Network, or VPN, is a tool used to re-route your ip, data requests, and information through another encrypted server somewhere else in the world.
+Digital Information
+An application used as a kind of database for personal passwords
+The idea that ISPâ€™s should give access to all internet content without favoring or blocking specific sources
+ISPs, or Internet Service Providers, provide the public access to the internet for exorbitant prices.
+The FCC, or Federal Communications Commission, is a U.S. government agency regulating communications by T.V, radio, wire, satellite, and cable.
+Internet piracy is using the internet to illegally copy/download/distribute software, usually using torrents.
+The DMCA, or Digital Millennium Copyright Act is a piece of U.S. copyright law that added conditions for the modern day (through internet regulation).
+The idea that copyrighted material may be quoted and copied if used for educational purposes
+In RSA encryption, the public modifier is the product of p and q, the two primes used to encrypt a message. This number is represented as n, and is used in many other aspects of the encryption.
+This is the key used to encrypt messages in RSA.
+Encrypted text
+This is the key used to decrypt messages in RSA
+Random text/numbers added to plaintext before encryption, to ensure that each encrypted result is different.
+The message that is encrypted
+A number whose only factors are one and itself.
+Two numbers are co-prime only if the greatest divisor of both of them is 1 (meaning that they share no common factors). For example, 8 (factors of 1, 2, 4, and 8) and 15 (factors of 1, 3, 5, 15) are coprime.
+A number that does not have a fractional component (e.g. 5, -15, or 1,000,000)
+a fixed-length group of bits. Messages are often split up into these, which are then individually manipulated.
+An algorithm used on blocks (determined by a key) to transform them.
+A kind of structure used in DES and AES block ciphers.
+A subkey is a manipulation of the main key that is used in tandem with block ciphers to transform blocks.
+The repetition of a designated set of operations.
+Subkey generation is the process by which a subkey is created using a previous subkey or main key.
+The order of the set of keys to be used on differing permutations.
+The number of bits used in a cryptographic key
+A number system in base 16 (0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f) often used by programmers. Each hexadecimal number represents 4 bits, so they are often found in pairs to make up a byte.
+A data structure (list) of items that a programer adds to and pulls from - making coding easier and more intuitive.
+Think of binary like a string of powers of two (from large to small), with a 1 adding a plus sign between two of them, and a - removing a plus sign. 16 8 4 2 1: 5 is 101, as it is 1 + 4, and 15 is 1111, as it is 8+4+2+1.
+A key derived from the primary key (eg. a subkey)
+The process in a 4X4 AES block where each row is shifted left once according to it's number (0th row 0 times, 1st row 1 time, ect.)
+A polynomial that cannot be factored into more polynomials.
+A table of look-up values a computer uses to transform text.
