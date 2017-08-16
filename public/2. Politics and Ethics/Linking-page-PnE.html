@@ -14,9 +14,12 @@
 <link href="../css/style.css" rel="stylesheet" />
 <!-- Google	Fonts -->
 
-
+<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,300" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700" rel="stylesheet">
 
+<script src="../js/jquery-1.10.2.js"></script>
 <title>Linking-Page</title>
 </head>
 
@@ -31,21 +34,88 @@
             <button onclick="myFunction()" class="listColor dropdown-button dropbtn"> TOPICS </button>
             <div id="main-dropdown" class="dropdown-content" style="margin-top:30px">
               <div class="col-lg-2 col-md-2 col-sm-2 col-lg-offset-2">
-                <header> <a href="../1. Applications/Websites.html"> Websites </a> </header>
+           			         			<header>
+           				<a href="../Websites.html">
+           				Websites <br>
 
-                <header> <a href="../1. Applications/Non-Websites.html"> Non-Websites </a> </header>
-                <ul>
-                  <li class="menu-list"> <a href="ethics.html"> I. Common Vulnerabilities </a> </li>
-                  <li class="menu-list"> <a href="../4. Blog/blog_post_080817.html#z3.0"> II. The Cloud </a> </li>
-                  <li class="menu-list"> <a href="../4. Blog/blog_post_080817.html#z4.0"> III. WiFi Networks </a> </li>
-                  <li class="menu-list"> <a href="../1. Applications/Non-Websites.html#z2.0"> IV. Industrial Data Storage </a> </li>
-                </ul>
-              </div>
-              <!--
-					<a href="#home">Home</a>
-					<a href="#about">About</a>
-					<a href="#contact">Contact</a>
-					-->
+           				</a>
+                  <p>
+                  Website security.
+                </p>
+           			</header>
+           			<header>
+           				<a href="../Non-Websites.html">
+           				Non-Websites
+           				</a>
+                  <p>
+                    Security beyond websites.
+                  </p>
+           			</header>
+              <header>
+                <a href="../InOurLives.html">
+                In Our Lives
+                </a>
+                <p>
+                  Tips for personal security.
+                </p>
+              </header>
+           		</div>
+              <div class="col-lg-2 col-md-2 col-sm-2">
+           			         			<header>
+           				<a href="2. Politics and Ethics/politics.html">
+           				Politics <br>
+
+           				</a>
+                  <p>
+                  Modern politics surrounding cybersecurity.
+                </p>
+           			</header>
+           			<header>
+           				<a href="2. Politics and Ethics/politics.html">
+           				Ethics
+           				</a>
+                  <p>
+                  Ethical debates about cybersecurity, in the form of blog posts.
+                  </p>
+           			</header>
+           		</div>
+              <div class="col-lg-2 col-md-2 col-sm-2">
+           			         			<header>
+           				<a href="../3. Mathematics/mathIntro.html">
+           				Intro  <br>
+           				</a>
+                  <p>
+                  Introduction to encryption - math, concepts, and more!
+                </p>
+           			</header>
+           			<header>
+           				<a href="../3. Mathematics/rsa.html">
+           			  RSA
+           				</a>
+                  <p>
+                  Mathematical and Conceptual explanation of RSA.
+                  </p>
+           			</header>
+                <header>
+           				<a href="../3. Mathematics/des.html">
+           			  DES
+           				</a>
+                  <p>
+                  Mathematical and Conceptual explanation of DES.
+                  </p>
+           			</header>
+           		</div>
+              <div class="col-lg-2 col-md-2 col-sm-2">
+           			         			<header>
+           				<a href="../4. Blog/blog_post_080817.html">
+           				Blog Post: Net Neutrality<br>
+           				</a>
+                  <p>
+                  Posted on 08/08/2017.
+                </p>
+           			</header>
+
+           		</div>
             </div>
           </div>
         </div>
@@ -59,10 +129,13 @@
     </div>
   </div>
 </div>
-<div class="linking-page-background">
+<div class="linking-page-background" id="bkground">
 	<h1>
 		Politics and Ethics
 	</h1>
+  <p>
+    While basic info and factoids help create a basic understanding, it is through discussing these ideas that deeper knowledge is learned. These sections explain two important aspects not often discussed: the ethics and politics behind cyber security. The various laws that affect the online world more than any single website could–The ethical and political tug-of-war between privacy and security–net neutrality in all it's complexities, these are all important topics, and here we discuss their connotations.
+  </p>
 
 	<div class="linking-buttons-container">
 		<div class="col-lg-10 col-md-10 col-sm-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
@@ -79,6 +152,10 @@
 		</div>
 	</div>
 </div>
+<script>
+document.getElementById("bkground").style.height = ($(window).height()-70) + "px";
+document.getElementById("bkground").style.width = $(window).width() + "px";
+</script>
 <script type="text/javascript">
 		  /*
 		  Changes the color of the nav bar text to black

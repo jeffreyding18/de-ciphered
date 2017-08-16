@@ -38,7 +38,7 @@ An successful attempt to steal data from a computer/network. The largest of thes
 A Virtual Private Network, or VPN, is a tool used to re-route your ip, data requests, and information through another encrypted server somewhere else in the world.
 Digital Information
 An application used as a kind of database for personal passwords
-The idea that ISPâ€™s should give access to all internet content without favoring or blocking specific sources
+The idea that ISPs should give access to all internet content without favoring or blocking specific sources
 ISPs, or Internet Service Providers, provide the public access to the internet for exorbitant prices.
 The FCC, or Federal Communications Commission, is a U.S. government agency regulating communications by T.V, radio, wire, satellite, and cable.
 Internet piracy is using the internet to illegally copy/download/distribute software, usually using torrents.

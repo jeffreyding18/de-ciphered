@@ -18,7 +18,7 @@
 
 .blog-header {
 	width: 60% !important;
-	margin-left: 10%; 
+	margin-left: 10%;
 	float:left;
 }
 
@@ -49,9 +49,10 @@
 
 #blog-text {
 	width: 60% !important;
-	margin: 0px 10%; 
+	margin: 0px 10%;
 	font-family: "Raleway", sans-serif;
 	font-size: 15px;
+
 }
 
 .text-modify {

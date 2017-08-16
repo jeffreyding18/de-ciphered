@@ -6,7 +6,7 @@
 
     100% To use For Personal And Commercial Use.
     IN EXCHANGE JUST GIVE US CREDITS AND TELL YOUR FRIENDS ABOUT US
-   
+
     ========================================================  */
 
 
@@ -32,7 +32,7 @@ body {
 
 
 /*=====================================
-  NAVBAR STYLES 
+  NAVBAR STYLES
     ===================================*/
 
 .logo-custom {
@@ -102,17 +102,19 @@ body {
 	padding-top: 20px;
 	padding-bottom: 5px;
 	margin-bottom: 10px;
-	border-bottom-width: thin;
-	border-bottom-style: solid;
-	border-bottom-color: black;
 }
 
 .dropdown-content a {
-	color: rgba(46, 122, 31, 1.00);
+	color: black;
 	display: block;
 	margin: 0 2%;
 	font-size: 15px;
 	margin-bottom: 5px;
+}
+
+.dropdown-content p {
+	font-size: 20px;
+	font-family: 'Josefin Sans', sans-serif;
 }
 
 .topic {
@@ -194,7 +196,7 @@ IMG.topic-icon {
 }
 
 .menuBackground {
-	background-color: #005b6d;
+	background-color: black;
 	height: 70px;
 	padding: 0;
 	-webkit-background-size: cover;
@@ -225,8 +227,8 @@ IMG.topic-icon {
 	min-height: 70px;
 	max-height: 70px;
 	border-bottom-style: solid;
-	border-width: thin;
-	border-bottom-color: rgba(167, 167, 167, 1.00);
+	border-width:thin;
+	border-bottom-color: rgba(255, 255, 255, .25);
 	color: rgba(255, 255, 255, 1.00);
 }
 
@@ -305,7 +307,7 @@ IMG.topic-icon {
 	.navbar-inverse .navbar-nav > li > a {
 		color: #FFFFFF;
 			padding: 22px 10px;
-	} 
+	}
 	.navbar-inverse .navbar-nav > li > a:hover {
         color: #000;
         padding: 22px 10px;
@@ -314,7 +316,7 @@ IMG.topic-icon {
 
 
 /*=====================================
-  HOME STYLES 
+  HOME STYLES
     ===================================*/
 
 .home-sec {
@@ -364,7 +366,7 @@ IMG.topic-icon {
 
 
 /*=====================================
-  TAG LINE STYLES 
+  TAG LINE STYLES
     ===================================*/
 
 .tag-line {
@@ -386,7 +388,7 @@ IMG.topic-icon {
 
 
 /*=====================================
-  HEADER LINE STYLES 
+  HEADER LINE STYLES
     ===================================*/
 
 .header-line {
@@ -407,7 +409,7 @@ h1::after {
 
 
 /*=====================================
-  ABOUT STYLES 
+  ABOUT STYLES
   ===================================*/
 
 .about-div {
@@ -462,16 +464,20 @@ h1::after {
 
 
 /*=====================================
-  MATHEMATICS STYLES 
+  MATHEMATICS STYLES
   ===================================*/
 
 
 /*=====================================
-  FACULTY STYLES 
+  FACULTY STYLES
   ===================================*/
 
 #PnE-sec {
+	/*
 	background-color: rgba(46, 132, 142, 1.00);
+	*/
+	background: url(../img/subpageFlipped.png) no-repeat center center;
+	background-size: 100% 100%;
 	color: #FFFFFF
 }
 
@@ -512,7 +518,7 @@ h1::after {
 
 
 /*=====================================
-  CONTACT STYLES 
+  CONTACT STYLES
   ===================================*/
 
 #contact-sec {
@@ -542,7 +548,7 @@ h1::after {
 
 
 /*=====================================
-  Footer STYLES 
+  Footer STYLES
   ===================================*/
 
 #footer {
@@ -565,17 +571,12 @@ h1::after {
 	border-bottom-width: thin;
 	border-bottom-color: rgba(98, 98, 98, 1.00);
 	border-bottom-style: solid;
-}
-
-.sidebar-table-button-topOfPage {
-	width: 80%;
-	height: 100%;
-	background-color: rgba(255, 255, 255, 1.00);
-	color: black;
-	margin: 0 10%;
-	border: none;
-	outline: none;
-	margin-top: 20px;
+	border-top-width: thin;
+	border-top-color: rgba(98, 98, 98, 1.00);
+	border-top-style: solid;
+	border-left-width: thin;
+	border-left-color: rgba(98, 98, 98, 1.00);
+	border-left-style: solid;
 }
 
 .sidebar-button-holder {
@@ -587,7 +588,7 @@ h1::after {
 
 .sidebar-buttons {
 	border-style: none;
-	width: 122.5px;
+	width: 122px;
 	display: inline-block;
 	vertical-align: middle;
 	border: none;
@@ -760,6 +761,7 @@ h1::after {
 #leftTab> ul> li> a {
 	text-decoration: none;
 	text-align: left;
+	color:black;
 }
 
 .inner-list {
@@ -776,6 +778,7 @@ h1::after {
 
 .inner-list> li> a {
 	text-decoration: none;
+	color: black;
 }
 
 .text {
@@ -796,7 +799,7 @@ h1::after {
 	margin-left: 250px;
 }
 
-.text> h1 {
+.text > h1 {
 	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
 	font-size: 70px;
 	letter-spacing: 1px;
@@ -804,12 +807,49 @@ h1::after {
 	margin: 0 5%;
 	margin-top: 30px;
 	padding: 50px 0;
-	background-color: #07889b;
+	background-color: rgba(31,40,51,.9);
 	width: 90%;
 	color: white;
 	margin-top: none !important;
 }
 
+.main-subpage-header {
+	position: relative;
+	/*
+	background-color: #88BDBC;
+	*/
+	background: url(../img/subpage.png) no-repeat center center;
+	background-size: 100% 100%;
+
+}
+
+.main-subpage-header> h1 {
+	font-family: 'Playfair Display', serif;
+	font-size: 175px;
+	letter-spacing: 1px;
+	margin-bottom: 50px;
+	margin: 0 5%;
+	margin-top: 10px;
+	padding: 50px 0;
+	width: 90%;
+	color: white;
+	margin-top: none !important;
+	border-bottom-style: none;
+	text-align: center;
+}
+
+.main-subpage-header > h1::after {
+	border: none;
+}
+
+.main-subpage-header > p {
+	width: 50%;
+	margin-left: 25%;
+	margin-right: 25%;
+	color: white;
+	font-size: 24px;
+	font-family: 'Josefin Sans', sans-serif;
+}
 .text> h1:after {
 	border: none;
 }
@@ -867,7 +907,7 @@ h1::after {
 }
 
 .footer-template {
-	background-color: #57bc90;
+	background-color: rgba(0, 0, 15, .9);
 	border-top-style: solid;
 	border-top-width: thin;
 	border-top-color: black;
@@ -959,7 +999,7 @@ blockquote {
 	font-size: 16px;
 	margin-top: 12px;
 	border: 2px solid black;
-	
+
 }
 
 

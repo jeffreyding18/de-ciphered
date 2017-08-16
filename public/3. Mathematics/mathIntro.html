@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../2. Politics and Ethics/Linking-page-PnE.html">
+<link href="../css/bootstrap.css" rel="stylesheet"/>
+<!-- FONT AWESOME CSS -->
+<link href="../css/font-awesome.min.css" rel="stylesheet"/>
+<!-- FLEXSLIDER CSS -->
+<link href="../css/flexslider.css" rel="stylesheet"/>
+<!-- CUSTOM STYLE CSS -->
+<link href="../css/style.css" rel="stylesheet"/>
+<!-- Google	Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'/>
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700" rel="stylesheet">
+
+	<script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+	</script>
+</head>
+
+<body>
+	<script src="../js/jquery-1.10.2.js"></script>
+	<div class="menuBackground">
+		<div class="navbar navbar-inverse navbar-absolute-top secondaryPage" id="menuSecondary">
+			<div class="container">
+				<div class="navbar-header"> </div>
+				<div class="navbar-collapse collapse move-me" id="colorUpdate">
+					<div class="nav navbar-nav navbar-left"><br>
+						<div class="list-element-topbar-left">
+							<button onclick="myFunction()" class="listColor dropdown-button dropbtn"> TOPICS </button>
+							<div id="main-dropdown" class="dropdown-content" style="margin-top:30px">
+								<div class="col-lg-2 col-md-2 col-sm-2 col-lg-offset-2">
+	           			         			<header>
+	           				<a href="../Websites.html">
+	           				Websites <br>
+
+	           				</a>
+	                  <p>
+	                  Website security.
+	                </p>
+	           			</header>
+	           			<header>
+	           				<a href="../Non-Websites.html">
+	           				Non-Websites
+	           				</a>
+	                  <p>
+	                    Security beyond websites.
+	                  </p>
+	           			</header>
+	              <header>
+	                <a href="../InOurLives.html">
+	                In Our Lives
+	                </a>
+	                <p>
+	                  Tips for personal security.
+	                </p>
+	              </header>
+	           		</div>
+	              <div class="col-lg-2 col-md-2 col-sm-2">
+	           			         			<header>
+	           				<a href="../2. Politics and Ethics/politics.html">
+	           				Politics <br>
+
+	           				</a>
+	                  <p>
+	                  Modern politics surrounding cybersecurity.
+	                </p>
+	           			</header>
+	           			<header>
+	           				<a href="../2. Politics and Ethics/politics.html">
+	           				Ethics
+	           				</a>
+	                  <p>
+	                  Ethical debates about cybersecurity, in the form of blog posts.
+	                  </p>
+	           			</header>
+	           		</div>
+	              <div class="col-lg-2 col-md-2 col-sm-2">
+	           			         			<header>
+	           				<a href="3. Mathematics/mathIntro.html">
+	           				Intro  <br>
+	           				</a>
+	                  <p>
+	                  Introduction to encryption - math, concepts, and more!
+	                </p>
+	           			</header>
+	           			<header>
+	           				<a href="3. Mathematics/rsa.html">
+	           			  RSA
+	           				</a>
+	                  <p>
+	                  Mathematical and Conceptual explanation of RSA.
+	                  </p>
+	           			</header>
+	                <header>
+	           				<a href="3. Mathematics/des.html">
+	           			  DES
+	           				</a>
+	                  <p>
+	                  Mathematical and Conceptual explanation of DES.
+	                  </p>
+	           			</header>
+	           		</div>
+	              <div class="col-lg-2 col-md-2 col-sm-2">
+	           			         			<header>
+	           				<a href="../4. Blog/blog_post_080817.html">
+	           				Blog Post: Net Neutrality<br>
+	           				</a>
+	                  <p>
+	                  Posted on 08/08/2017.
+	                </p>
+	           			</header>
+
+	           		</div>
+							</div>
+						</div>
+					</div>
+					<ul class="nav navbar-nav navbar-right">
+						<li> <a  href="../index.html" class="listColor"> HOME </a> </li>
+						<li> <a href="../1. Applications/Linking-Page.html" class="listColor"> APPLICATION AND CONSEQUENCES </a> </li>
+						<li> <a href="../2. Politics and Ethics/Linking-page-PnE.html" class="listColor"> POLITICS AND ETHICS </a> </li>
+						<li> <a href="Linking-page-math.html" class="listColor"> MATHEMATICS </a> </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="main">
+		<div class="sidebar" id="scrolling-sidebar">
+			<div id="leftTab" class="tabText">
+				<h2> Math Intro</h2>
+				<ul>
+					<li> <a href="#z1.0"> 1. Encryption</a>
+						<ul class="inner-list">
+							<li> <a href="#z1.1"> I. What is it? </a> </li>
+							<li> <a href="#z1.2"> II. How is it used? </a> </li>
+							<li> <a href="#z1.3"> III. Can I encrypt my own messages? </a> </li>
+							<li> <a href="#z1.4"> IV. What are the most secure forms of encryption? </a> </li>
+						</ul>
+					</li>
+					<li> <a href="#z2.0"> 2. Types of encryption </a>
+						<ul class="inner-list">
+							<li> <a href="#z2.1"> I. Symmetric Encryption </a> </li>
+							<li> <a href="#z2.2"> II. Asymmetric Encryption </a> </li>
+							<li> <a href="#z2.3"> III. Symmetric vs Asymmetric? </a> </li>
+						</ul>
+					</li>
+					<li> <a href="#z3.0"> 3. General Knowledge </a>
+						<ul class="inner-list">
+							<li> <a href="#z3.1"> I. Why Bob and Alice and Eve? </a> </li>
+							<li> <a href="#z3.2"> II. What is Diffie-Hellman key exchange? </a> </li>
+							<li> <a href="#z3.3"> III. What is a hash function? </a> </li>
+							<li> <a href="#z3.4"> IV. What is a digital signature? </a> </li>
+							<li> <a href="#z3.5"> V. What are common attacks? </a> </li>
+
+						</ul>
+					</li>
+					<li> <a href="#z4.0"> 4. Fundamental Mathematics of Encryption </a>
+						<ul class="inner-list">
+							<li> <a href="#z4.1"> I. What is Modular Arithmetic? </a>
+							</li>
+							<li> <a href="#z4.2"> II. How does Binary Work? </a> </li>
+						</ul>
+					</li>
+				</ul>
+				<div class="next-page">
+					<p> Next Topic: </p>
+					<button class="sidebar-table-button-nextPage" onClick="javascript:document.location='des.html'"> DES </button>
+				</div>
+				<div class="back-to-top">
+					<button class="sidebar-table-button-topOfPage" onClick="javascript:document.location='rsa.html'"> Back to top! </button>
+				</div>
+			</div>
+			<div id="rightTab" class="tabText" style="display:none">
+				<h2>Terms</h2>
+				<form>
+					<input id="vocab" type="text" name="search" placeholder="Search..." onKeyUp="vocabSet(this.value)" autocomplete="off">
+				</form>
+				<p id="txtHint"></p>
+				<!--
+      <h3> Click the terms to see definitions!</h3>
+
+      <ul>
+        <li class="terms">
+          <div class="term-click" onClick="showDefinition(0)"> HTML: </div>
+        </li>
+        <li class="terms">
+          <div class="term-click" onClick="showDefinition(1)"> CSS: </div>
+        </li>
+        <li class="terms">
+          <div class="term-click" onClick="showDefinition(2)"> HTTP(s): </div>
+        </li>
+        <li class="terms">
+          <div class="term-click" onClick="showDefinition(3)"> Web server: </div>
+        </li>
+        <li class="terms">
+          <div class="term-click" onClick="showDefinition(4)"> Cookies: </div>
+        </li>
+        <li class="terms">
+          <div class="term-click" onClick="showDefinition(5)"> Malware: </div>
+        </li>
+        <li class="terms">
+          <div class="term-click" onClick="showDefinition(6)"> ip address: </div>
+        </li>
+        <li class="terms">
+          <div class="term-click" onClick="showDefinition(7)"> Domain name: </div>
+        </li>
+      </ul>
+      <button onClick="closeAllDefinitions()"> Close all open definitions </button>
+      -->
+			</div>
+			<div class="sidebar-button-holder">
+				<button class="sidebar-buttons" onclick="openLeft()" id="leftButton">Contents</button>
+				<button class="sidebar-buttons" onclick="openRight()" id="rightButton">Definitions</button>
+			</div>
+		</div>
+		<div class="main-subpage-header" id="headDiv">
+	  <h1 style="font-size: 150px"> Intro to Encryption </h1>
+	  <p>
+	 	 As any Fromsoft game or crash course history can show us, humanity lives in a constantly repeating cycle. From the social cycle theory to the average American workday, many aspects of modern society fall into this pattern. One of modern societies most important aspects, the internet, is currently stuck in perhaps the most prevalent cycle of all - the constant tug-of-war between freedom and safety.
+	 </p> <p> Let’s take a step back. How is this a tug of war?
+	 </p> <p> Well, you’ve probably heard of the social contract before. Put simply, it’s the idea that by placing some restraints on human behavior, it makes it possible for humanity to live in a community, which in turn moves society further both socially and morally. Within this community, our mental freedom to think differently than others has actually expanded, even if we are held subject to some higher power (government).
+	 </p>
+	 </p>
+	  </div>
+		<div class="text-container">
+			<div class="text">
+				<div class="text-body">
+					<h3 id="z1.0"> Encryption </h3>
+
+
+					<h4 id="z1.1"> What is it? </h4>
+					<p> Encryption is the process of hiding data from potential attackers by changing the form of the data. This data has to be able to be decrypted, however, by either reversing the process of encryption or using a key to unlock the data. (more detail later)
+					</p>
+					<h4 id="z1.2"> How is it used?</h4>
+					<p>
+						Encryption has been used constantly throughout history. Originally, it was used mostly in the military, to prevent sensitive information from being intercepted. One of the most famous uses of encryption is the Caesar Cipher, a method Caesar used to protect his plans.
+It is a rather simple cipher - each letter of the alphabet is simply shifted left 3 spaces:
+D becomes A, G becomes A, and A wraps around to W, and so on.
+Ciphers continued to be used for the military,
+					</p>
+
+					<h4 id="z1.3"> Can I encryption my own messages?</h3>
+					<p> If you’re going to send a physical letter, then a caesar cipher may protect your intrusive little brother from understanding anything, but beyond such a situation it really isn’t worth it to encrypt your own messages. Some of these methods are so complicated that using them to encrypt longer messages by hand can take days of straight work. If you want to encrypt digital messages, however, the process is a lot easier. If you have a little experience with coding, these methods can be very easy to automate, and can be done in a lot less time. It still isn’t worth it in many cases (as good messaging apps will encrypt for you), but if you need your messages to be completely secure, encrypting them yourself can be a good idea.
+</p>
+					<h4 id="z1.4"> What are the most secure forms of encryption?</h4>
+<p>Currently, RSA is perhaps the most secure form (as it is the main asymmetric method), however it is slow and really only works one way. For a good two way method try AES - a bit more vulnerable to attacks (as both sides need the same key to unlock the message), but still secure. For absolute security, use RSA encryption to encrypt the AES key which was used to encrypt the original message. </p>
+					<h3 id="z2.0"> Types of encryption </h3>
+					<p> There are two main types of encryption - Symmetric and Asymmetric. Both have their advantages and disadvantages! </p>
+					<h4 id="z2.1"> Symmetric Encryption</h4>
+					<p> Symmetric encryption is the most simple form of encryption - and the one most people already know about. It comes from the idea of using a system to jumble text, so that only those who know the system can understand the original message. The key factor here is that the encryption goes two ways - this is why it is called symmetric - those who can encrypt the message using an algorithm can decrypt the message with the same algorithm.  </p>
+
+					<h4 id="z2.2"> Asymmetric Encryption </h4>
+					<p> Asymmetric encryption is a bit harder to explain than symmetric. You see, when we think of an encrypted message, we usually think that one could only decrypt that message if you knew how it was encrypted in the first place. Well, Asymmetric encryption doesn’t exactly work like that. Asymmetric encryption works like email: anyone can encrypt a message and send it securely to you, but only you have the tools to decrypt the message. This means that the system used to asymmetrically encrypt a message is different from the system used to decrypt it.
+					</p>
+					<h4 id="z2.3"> Symmetric vs Asymmetric Encryption </h4>
+					<p> Both systems work well, and usually can protect your message, but their are various strengths/weaknesses of both. Let's start with the first: security.
+					</p>
+					<p> With security, asymmetric is the clear winner. As explained here (link to RSA encryption), Asymmetric can only be cracked using a brute-force attack, and with the right prime number length that can take hundreds of thousands of years to accomplish even on a supercomputer. Symmetric encryption, while still mostly safe, has been known to be cracked. Specifically DES encryption, which was the standard form a decade ago. Nowadays, with triple DES and AES (links to all these), symmetric encryption is much safer.
+					</p>
+					<p> With Speed, however, symmetric is much faster. Symmetric just requires inputting a key into an algorithm and de-encrypting by using the same steps, just the opposite way. RSA, however, takes barely any time to encrypt, but a lot longer to decrypt. This is because decrypting RSA requires vast more amounts of calculations than DES and AES.
+					</p>
+					<p>Because of these differences, Symmetric and Asymmetric are not used interchangeably. Each have their own important purposes - but the most common usage of both is in hybrid encryption, where RSA is used to encrypt a DES or AES key. This method is both fast (the RSA message is short), and very secure (the security of two encryptions).
+</p>
+					<h3 id="z3.0"> General Knowledge </h3>
+					<h4 id="z3.1"> Why do I keep seeing Bob, Alice, and Eve? </h4>
+					<p>Alice and Bob are characters with a troubled past. Always on the run, their every conversation is wiretapped and recorded, by government agencies, attackers, or even subversive, malicious “friends”. They live in a harsh world, where information is power and they are constantly prodded to give up what they know.
+					</p><p>But Bob and Alice are stalwart.
+					</p><p>They may live across the world from one another, but these two know how to communicate secretly - they are the two best cryptographers this world will ever know.
+					</p><p>Enter Eve, a malicious woman hoping to tear down the trust that Alice and Bob have built up. Her past with the two of them is largely unknown, but her hatred is clear. Rich from internet terrorism and subterfuge, Eve will stop at nothing to ruin her two sworn enemies.
+					</p>
+					<h4 id="z3.2"> What is the Diffie-Hellman key exchange? </h4>
+					<p> Diffie-Hellman key exchange is a secure way of transmitting (and creating) passwords between two people. It is used to find AES and DES keys without any possible interception.
+					<p>It works thusly:
+<p> Alice and Bob are smuggling gold across the canadian border. They know that Canadian mail customs will open and check every single package sent across, but will ignore any locks on said package.
+</p><p> But Alice and Bob don’t have a shared key for a lock - it would be too risky two both have a copy of the same key - instead, Alice and Bob have two separate locks, each with their own key.
+</p><p>Being cryptographic super geniuses, both of them independently come up with the smae plan to keep the gold safe.
+</p><p>Here’s how they do it.
+</p><p>Alice is in Canada with the gold. She buys an unmarked briefcase, locks it with her padlock, and sends it to Bob.
+</p><p>Bob has been waiting impatiently for a while now, and is worried for Alice. Seeing the briefcase on his doorstep with Alice’s lock on it, he smiles to himself, and nonchalantly brings it into his house. Unable to open the lock himself, he instead padlocks the case a second time with his personal lock, and sends it back to Alice.
+</p><p>Alice is also worried. Does Bob know what I’m trying to do? Have the pigs found us out?
+</p><p>But then Alice sees the briefcase, and a smile stretches across her face. Bob knew exactly what he was doing.
+</p><p>Alice unlocks her padlock, leaving the briefcase secure with only Bob’s lock, and then sends it back to Bob. This may work, she thinks. She needs money from selling this - it’s the only way her and her poor mother will be able to survive in this cold, calculating world.
+</p><p>And the briefcase gets through the border, and Bob unlocks it, selling all the gold, and then bitcoin-wiring some of the money back to Alice.
+</p><p>Lets go over that again.
+</p><p>A locks message M with A-lock, and sends it to B. B locks M with B-lock, and sends it back to A. A unlocks A-lock, and sends M to B. B unlocks B-lock, and can now read M.
+</p>
+						<h4 id="z3.3"> What is a hash function?</h4>
+						<p>
+Take any color of paint. This represents your message. Now, take an equal amount of neon green paint and mix it with your message. The resulting paint color is a mix of the two, but you could not separate them - you can’t un-mix paint. If you gave the mixture to someone else, they couldn’t tell you what your original color was. What you can do, however, is verify your color by mixing it with the green and giving it to that same person. Each original color has a different looking mixture with the green. In the same way, a hash function takes data and changes it into an unrecognizable and impossible to un-hash form with a very specific signature. That signature is incredibly important -  if you hash the sentence Hello my name is Bob and Hello my nam is Bob, the hashes would come out completely different. One of the most common uses of this is in password storage. Web Servers never store your password in plaintext, they only hash your password and check to see if what you wrote matches the hash they copy down in your servers.
+</p>
+						<h4> What's the difference between hashing and encryption? </h4>
+						<p>What’s the difference between hashing and encryption?
+Both change data into a different form, but with encryption you can decrypt that data to change it back. With hashing, there’s no getting back what you hash, just as there’s no separating paint colors.
+						</p>
+						<h4 id="z3.4"> What is a digital signature?</h4>
+						<p>
+							To understand digital signatures, it may be best to understand RSA encryption. So go here (hyperlink to RSA encryption) and then come back.
+						</p> <p>Digital signatures are just RSA in reverse. In RSA, other people encrypt messages using your public key, and only you can decrypt them using your private key. With a digital signature, anyone can decrypt the message you send, but only you can encrypt it. This is not used for communication, as it would allow anyone with the public key to decrypt your messages: instead, the messages you send are proven to be yours, as only you have the tools available to encrypt.
+						</p>
+						<h4 id="z3.5"> What are some common attacks against encryption? </h4>
+						<p>
+						The most basic form of encryption attack is the brute force attack. This is basically just guessing someone's password by guessing every possible combination of letters - not the most efficient kind of attack, but easy to implement and code, and possible with super powerful computers breaking simple encryptions (single-DES).
+					</p><p>Another kind of attack has to do with hashes: If a hacker can get into a website's server, that attacker may get access to the password hashes of that website’s user base. That hacker can then compare those password hashes with millions of the hashes of the most common passwords, and if any match, then that attack can now gain access to a user's account.
+					</p>
+						</p>
+						<h3 id="z4.0"> Fundamental mathematics of Encryption</h3>
+						<h4 id="z4.1"> What is modular Arithmetic? </h4>
+						<p>
+							Before understanding any of the math for RSA encryption (or any kind of encryption at all,) you have to first understand modular arithmetic.
+							</p> <p>Luckily (if you live in the United States), you’ve already done modular arithmetic before. Very often, in fact.
+							</p> <p>Now, this may not be true, but imagine the time is 4’oclock pm. The hour hand of a clock is on the 4, and the minute hand is on the 12.
+							</p> <p>Now think of the amount of time that has passed since the beginning of the day. If you did basic addition right, you’d find that it’s been 16 hours since the days technically began.
+							</p> <p>The clock, however, shows 4, not 16. This is because after 12 hours, the time resets to 0, and then goes back to 4.
+							</p> <p>Another way to represent this would be 16 mod 12.
+							</p> <p>You see, modular arithmetic just designates a number at which your count “resets”, so to say. So 4 mod 12 is still 4, yet 13 mod 12 is 1.
+							</p> <p>And it can reset multiple times: 30 mod 12 is 6, because 30 - 12 = 18, after 18 hours it would be 6 oclock.
+							</p> <p>And it doesn’t just have to reset after 12, either. You can mod other numbers:
+							</p> <p>For example, 5 mod 3 would equal 2: 1, 2, 3, (resets back to 0) 1, 2
+							</p> <p>10 mod 5 is 0, and 1 mod 2 is 1.
+							</p> <p>This kind of arithmetic is very important to all kinds of encryption (and many other kinds of computer code).
+						<h4 id="z4.2"> How does binary work? </h4>
+						<p>Think of the powers of two, starting at 2^0. 1, 2, 4, 8, 16, et. Now, think of them as a series of switches on a wall - where a big calculator adds all the switches you’ve turned on - meaning that if you had the 0th switch (2^0) turned on, the calculator would read 1, and if you had the 0th (2^0) and 1st (2^1) switch turned on, the calculator would read (1+2=) 3.
+							</p> <p>Binary is just a physical representation of this, with a 1 meaning the switch is on, and a 0 meaning it’s off. (One caveat: the list of powers begins at the right and heads to the left)
+							</p> <p>Let’s break down a number: <br>
+								<blockquote>
+							<div style="text-align:center"> 101001 = 41 </div>
+								</blockquote>
+							</p> <p>On our wall of flipped switches, the furthest switch (the left most number) would be the switch representing 32, and that is turned on (equals 1) so that’s the first number to be added. The next switch, 16, is not added, as the value representing it is 0, so it is turned off. The only other 1s represent the 8 and 1 switch, so those are added as well. <br>
+								<blockquote>
+							<div style="text-align:center"> 32 + 8 + 1 = 41. </div>
+								</blockquote>
+							</p> <p>A bitwise operation takes two long lines of bits and compares them, one pair at a time. For each pair, a single bit is outputted.
+							</p> <p>For example, a bitwise XOR (perhaps the most common bitwise operation in encryption), takes two bytes (these are just for example-it doesn’t have to be 8 bits long) and outputs an 8 bit result based on the following rules
+								<blockquote>
+									<div style="text-align:center">
+							If a 1 and a 1 is compared, it outputs 0 <br>
+							If 0 and a 1 are compared, it outputs 1 <br>
+							If a 1 and a 0 are compared, it outputs 1 <br>
+							If a 0 and a 0 are compared, it outputs 0
+							</div>
+						</blockquote>
+							</p> <p>So
+								<blockquote>
+									<div style="text-align:center">
+							</p> <p>10010110 and
+							</p> <p>01011101
+							</p> <p>Equals
+							</p> <p>11001011
+							</div>
+						</blockquote>
+							</p> <p>The other bitwise functions are as follows:
+							</p> <p>Bitwise &#38; (and):
+								<blockquote>
+									<div style="text-align:center">
+							If a 1 and a 1 is compared, it outputs 1
+							If 0 and a 1 are compared, it outputs 0
+							If a 1 and a 0 are compared, it outputs 0
+							If a 0 and a 0 are compared, it outputs 0
+						</div>
+					</blockquote>
+
+							Bitwise or:
+
+							<blockquote>
+								<div style="text-align:center">
+							If a 1 and a 1 is compared, it outputs 1
+							If 0 and a 1 are compared, it outputs 1
+							If a 1 and a 0 are compared, it outputs 1
+							If a 0 and a 0 are compared, it outputs 0
+						</div>
+					</blockquote>
+				</p>
+
+						<div class="next-page">
+							<button class="next-page-button" onClick="javascript:document.location='Non-Websites.html'"> Next Topic: NON-WEBSITES </button>
+						</div>
+				</div>
+			</div>
+		</div>
+		<div id="PnE-sec"   >
+					 <div class="overlay">
+	<div class="container set-pad">
+			<div class="row text-center">
+								 <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+										 <h1 data-scroll-reveal="enter from the bottom after 0.1s" class="header-line" >CONTACT US  </h1>
+										 <p data-scroll-reveal="enter from the bottom after 0.3s">
+											Hey! Thanks for visiting the site. If you have any comments, recommendations, criticism, send it our way below.
+												 </p>
+								 </div>
+
+						 </div>
+						 <!--/.HEADER LINE END-->
+					 <div class="row set-row-pad"  data-scroll-reveal="enter from the bottom after 0.5s" >
+
+
+								 <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+										<form action="mailto:jding@thacher.org">
+												<div class="form-group">
+														<input type="text" class="form-control "  required="required" placeholder="Your Name" />
+												</div>
+												<div class="form-group">
+														<input type="text" class="form-control " required="required"  placeholder="Your Email" />
+												</div>
+												<div class="form-group">
+														<textarea name="message" required class="form-control" style="min-height: 150px;" placeholder="Message"></textarea>
+												</div>
+												<div class="form-group">
+														<button type="submit" class="btn btn-info btn-block btn-lg">SUBMIT REQUEST</button>
+												</div>
+
+										</form>
+								</div>
+
+							 </div>
+								</div>
+					</div>
+			 </div>
+	</div>
+	<script>
+	document.getElementById("headDiv").style.height = (($(window).height()) + 100)+ "px";
+	document.getElementById("scrolling-sidebar").style.top = $(window).height() + "px";
+	</script>
+	<script>
+			$( document ).scroll( function () {
+				var $el = $( ".sidebar" );
+				//310 is the height of the bottom div
+				let PnE = $("#PnE-sec").height();
+				let btPixel = $(document).height() - $(window).height() - PnE;
+				var isPositionFixed = ( $el.css( "position" ) == "fixed" );
+				if ( $( this ).scrollTop() > $(window).height() + 170 ) {
+					$( ".sidebar" ).css( {
+						"position": "fixed",
+						"top": "5%",
+						"left": "20px",
+						"height": "90%",
+					} );
+				}
+				if ( $( this ).scrollTop() < $(window).height() + 170) {
+					$( ".sidebar" ).css( {
+						"position": "absolute",
+						"top": ($(window).height() + 170) + "px",
+						"height": "80%",
+						"left": "0px",
+					} );
+				}
+				if ( $( this ).scrollTop() > btPixel) {
+					$( ".sidebar" ).css( {
+						"position": "absolute",
+						"top": btPixel,
+						"height": "100%",
+						"left": "0px",
+					} );
+				}
+
+			} );
+	</script>
+	<script>
+	function vocabSet(str) {
+	  if (str.length == 0) {
+	      document.getElementById("txtHint").innerHTML = "";
+	      return;
+	  } else {
+	    $(document).ready(function() {
+	      //fetch text file
+	      $.get('../txt/terms.txt', function(terms) {
+	        $.get("../txt/definitions.txt", function(defs) {
+	          //split on new lines
+	          var termArray = terms.split("\n");
+	          var defArray = defs.split("\n");
+	          document.getElementById("txtHint").innerHTML = "";
+	          for(i = 0; i < termArray.length; i++) {
+	            if(termArray[i].toLowerCase().includes(str) || defArray[i].toLowerCase().includes(str)) {
+	              document.getElementById("txtHint").innerHTML += ("<h4><b>" + termArray[i] + "</b></h4><p>" + defArray[i] + "</p><br>");
+	            }
+	          }
+	        });
+	      });
+	  	});
+		};
+	}
+	</script>
+	<script>
+		function hideDefinition( idname ) {
+			document.getElementById( "def-one" ).style.display = "none";
+
+		}
+	</script>
+	<script>
+		function openLeft() {
+			var i;
+			var x = document.getElementsByClassName( "tabText" );
+			for ( i = 0; i < x.length; i++ ) {
+				x[ i ].style.display = "none";
+			}
+			document.getElementById( "leftTab" ).style.display = "block";
+			document.getElementById( "leftButton" ).style.backgroundColor = "rgba(50,50,50,1.00)"
+			document.getElementById( "leftButton" ).style.color = "white"
+			document.getElementById( "rightButton" ).style.backgroundColor = "rgba(192,192,192,1.00)"
+			document.getElementById( "rightButton" ).style.color = "black"
+		}
+	</script>
+	<script>
+		function openRight() {
+			var i;
+			var x = document.getElementsByClassName( "tabText" );
+			for ( i = 0; i < x.length; i++ ) {
+				x[ i ].style.display = "none";
+			}
+			document.getElementById( "rightTab" ).style.display = "block";
+			document.getElementById( "rightButton" ).style.backgroundColor = "rgba(50,50,50,1.00)"
+			document.getElementById( "rightButton" ).style.color = "white"
+			document.getElementById( "leftButton" ).style.backgroundColor = "rgba(192,192,192,1.00)"
+			document.getElementById( "leftButton" ).style.color = "black"
+			var colors = [ "MediumBlue", "DarkGreen", "DarkCyan", "LightSeaGreen", "MediumSeaGreen", "SteelBlue", "SkyBlue" ];
+
+			var defs = document.getElementsByClassName( "terms" );
+			let colorIndex = 0;
+			// -- If you want the terms to be different colors --
+			/*
+			for (i = 0; i < defs.length; i++) {
+				colorIndex = i % (colors.length);
+				defs[i].style.color = colors[colorIndex];
+			}
+			*/
+		}
+	</script>
+	<script type="text/javascript">
+		/*
+				  Changes the color of the nav bar text to black
+				  */
+		var menu = document.getElementById( "menuSecondary" )
+		var menuElems = document.getElementsByClassName( "listColor" )
+		menu.addEventListener( "mouseover", function () {
+
+			for ( i = 0; i < menuElems.length; i++ ) {
+				menuElems[ i ].style.color = "black"
+			}
+
+		} )
+	</script>
+	<script type="text/javascript">
+		/*
+					Changes the color of the nav bar text to white
+					*/
+		var menu = document.getElementById( "menuSecondary" )
+		var menuElems = document.getElementsByClassName( "listColor" )
+		menu.addEventListener( "mouseout", function () {
+
+			for ( i = 0; i < menuElems.length; i++ ) {
+				menuElems[ i ].style.color = "white"
+			}
+
+		} )
+	</script>
+	<script>
+		/* When the user clicks on the button,
+			toggle between hiding and showing the dropdown content */
+		function myFunction() {
+			document.getElementById( "main-dropdown" ).classList.toggle( "show" );
+
+		}
+
+		// Close the dropdown if the user clicks outside of it
+		window.onclick = function ( event ) {
+			if ( !event.target.matches( '.dropbtn' ) ) {
+
+				var dropdowns = document.getElementsByClassName( "dropdown-content" );
+				var i;
+				for ( i = 0; i < dropdowns.length; i++ ) {
+					var openDropdown = dropdowns[ i ];
+					if ( openDropdown.classList.contains( 'show' ) ) {
+						openDropdown.classList.remove( 'show' );
+					}
+				}
+
+			}
+		}
+	</script>
+
+	<!--  Jquery Core Script -->
+	<script src="../js/jquery-1.10.2.js"></script>
+	<!--  Core Bootstrap Script -->
+	<script src="../js/bootstrap.js"></script>
+	<!--  Flexslider Scripts -->
+	<script src="../js/jquery.flexslider.js"></script>
+	<!--  Scrolling Reveal Script -->
+	<script src="../js/scrollReveal.js"></script>
+	<!--  Scroll Scripts -->
+	<script src="../js/jquery.easing.min.js"></script>
+	<!--  Custom Scripts -->
+	<script src="../js/custom.js"></script>
+</body>
+
+</html>

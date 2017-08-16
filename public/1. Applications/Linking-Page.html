@@ -14,9 +14,12 @@
 <link href="../css/style.css" rel="stylesheet" />
 <!-- Google	Fonts -->
 
-
+<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,300" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700" rel="stylesheet">
 
+<script src="../js/jquery-1.10.2.js"></script>
 <title>Linking-Page</title>
 </head>
 
@@ -31,26 +34,88 @@
             <button onclick="myFunction()" class="listColor dropdown-button dropbtn"> TOPICS </button>
             <div id="main-dropdown" class="dropdown-content" style="margin-top:30px">
               <div class="col-lg-2 col-md-2 col-sm-2 col-lg-offset-2">
-                <header> <a href="Websites.html"> Websites </a> </header>
-                <ul>
-                  <li class="menu-list"> <a href="Websites.html#z1.0"> I. What is a website? </a> </li>
-                  <li class="menu-list"> <a href="Websites.html#z2.0"> II. Website Communication </a> </li>
-                  <li class="menu-list"> <a href="Websites.html#z3.0"> III. Security Risks </a> </li>
-                  <li class="menu-list"> <a href="Websites.html#z4.0"> IV. Common Attacks </a> </li>
-                </ul>
-                <header> <a href="Non-Websites.html"> Non-Websites </a> </header>
-                <ul>
-                  <li class="menu-list"> <a href="Non-Websites.html#z2.0"> I. Common Vulnerabilities </a> </li>
-                  <li class="menu-list"> <a href="Non-Websites.html#z3.0"> II. The Cloud </a> </li>
-                  <li class="menu-list"> <a href="Non-Websites.html#z4.0"> III. WiFi Networks </a> </li>
-                  <li class="menu-list"> <a href="Non-Websites.html#z5.0"> IV. Industrial Data Storage </a> </li>
-                </ul>
-              </div>
-              <!--
-					<a href="#home">Home</a>
-					<a href="#about">About</a>
-					<a href="#contact">Contact</a>
-					-->
+           			         			<header>
+           				<a href="Websites.html">
+           				Websites <br>
+
+           				</a>
+                  <p>
+                  Website security.
+                </p>
+           			</header>
+           			<header>
+           				<a href="Non-Websites.html">
+           				Non-Websites
+           				</a>
+                  <p>
+                    Security beyond websites.
+                  </p>
+           			</header>
+              <header>
+                <a href="InOurLives.html">
+                In Our Lives
+                </a>
+                <p>
+                  Tips for personal security.
+                </p>
+              </header>
+           		</div>
+              <div class="col-lg-2 col-md-2 col-sm-2">
+           			         			<header>
+           				<a href="../2. Politics and Ethics/politics.html">
+           				Politics <br>
+
+           				</a>
+                  <p>
+                  Modern politics surrounding cybersecurity.
+                </p>
+           			</header>
+           			<header>
+           				<a href="../2. Politics and Ethics/politics.html">
+           				Ethics
+           				</a>
+                  <p>
+                  Ethical debates about cybersecurity, in the form of blog posts.
+                  </p>
+           			</header>
+           		</div>
+              <div class="col-lg-2 col-md-2 col-sm-2">
+           			         			<header>
+           				<a href="../3. Mathematics/mathIntro.html">
+           				Intro  <br>
+           				</a>
+                  <p>
+                  Introduction to encryption - math, concepts, and more!
+                </p>
+           			</header>
+           			<header>
+           				<a href="../3. Mathematics/rsa.html">
+           			  RSA
+           				</a>
+                  <p>
+                  Mathematical and Conceptual explanation of RSA.
+                  </p>
+           			</header>
+                <header>
+           				<a href="../3. Mathematics/des.html">
+           			  DES
+           				</a>
+                  <p>
+                  Mathematical and Conceptual explanation of DES.
+                  </p>
+           			</header>
+           		</div>
+              <div class="col-lg-2 col-md-2 col-sm-2">
+           			         			<header>
+           				<a href="../4. Blog/blog_post_080817.html">
+           				Blog Post: Net Neutrality<br>
+           				</a>
+                  <p>
+                  Posted on 08/08/2017.
+                </p>
+           			</header>
+
+           		</div>
             </div>
           </div>
         </div>
@@ -64,11 +129,12 @@
     </div>
   </div>
 </div>
-<div class="linking-page-background">
+<div class="linking-page-background" id="bkground">
 	<h1>
 		Applications
 	</h1>
-
+  <p>
+Through understanding how online and offline security works, one can better prevent getting hacked. From what HTTP means to the differences between cloud storage and computing, this section explains the applications of cybersecurity in everyday life. It also gives tips on how to become more secure day-to-day and recommends various security applications to download.  </p>
 	<div class="linking-buttons-container">
 		<div class="col-lg-10 col-md-10 col-sm-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
 			<a href="Websites.html">
@@ -89,6 +155,10 @@
 		</div>
 	</div>
 </div>
+<script>
+document.getElementById("bkground").style.height = ($(window).height()-70) + "px";
+document.getElementById("bkground").style.width = $(window).width() + "px";
+</script>
 <script type="text/javascript">
 		  /*
 		  Changes the color of the nav bar text to black

@@ -12,6 +12,8 @@
 <link href="../css/style.css" rel="stylesheet"/>
 <!-- Google	Fonts -->
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'/>
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700" rel="stylesheet">
 
 <link href="../css/blog.css" rel="stylesheet" />
 
@@ -36,26 +38,88 @@
 							<button onclick="myFunction()" class="listColor dropdown-button dropbtn"> TOPICS </button>
 							<div id="main-dropdown" class="dropdown-content" style="margin-top:30px">
 								<div class="col-lg-2 col-md-2 col-sm-2 col-lg-offset-2">
-									<header> <a href="../1. Applications/Websites.html"> Websites </a> </header>
-									<ul>
-										<li class="menu-list"> <a href="../1. Applications/Websites.html#z1.0"> I. What is a website? </a> </li>
-										<li class="menu-list"> <a href="../1. Applications/Websites.html#z2.0"> II. Website Communication </a> </li>
-										<li class="menu-list"> <a href="../1. Applications/Websites.html#z3.0"> III. Security Risks </a> </li>
-										<li class="menu-list"> <a href="../1. Applications/Websites.html#z4.0"> IV. Common Attacks </a> </li>
-									</ul>
-									<header> <a href="../1. Applications/Non-Websites.html"> Non-Websites </a> </header>
-									<ul>
-										<li class="menu-list"> <a href="../1. Applications/Non-Websites.html#z2.0"> I. Common Vulnerabilities </a> </li>
-										<li class="menu-list"> <a href="../1. Applications/Non-Websites.html#z3.0"> II. The Cloud </a> </li>
-										<li class="menu-list"> <a href="../1. Applications/Non-Websites.html#z4.0"> III. WiFi Networks </a> </li>
-										<li class="menu-list"> <a href="../1. Applications/Non-Websites.html#z5.0"> IV. Industrial Data Storage </a> </li>
-									</ul>
-								</div>
-								<!--
-					<a href="#home">Home</a>
-					<a href="#about">About</a>
-					<a href="#contact">Contact</a>
-					-->
+	           			         			<header>
+	           				<a href="../Websites.html">
+	           				Websites <br>
+
+	           				</a>
+	                  <p>
+	                  Website security.
+	                </p>
+	           			</header>
+	           			<header>
+	           				<a href="../Non-Websites.html">
+	           				Non-Websites
+	           				</a>
+	                  <p>
+	                    Security beyond websites.
+	                  </p>
+	           			</header>
+	              <header>
+	                <a href="../InOurLives.html">
+	                In Our Lives
+	                </a>
+	                <p>
+	                  Tips for personal security.
+	                </p>
+	              </header>
+	           		</div>
+	              <div class="col-lg-2 col-md-2 col-sm-2">
+	           			         			<header>
+	           				<a href="../2. Politics and Ethics/politics.html">
+	           				Politics <br>
+
+	           				</a>
+	                  <p>
+	                  Modern politics surrounding cybersecurity.
+	                </p>
+	           			</header>
+	           			<header>
+	           				<a href="../2. Politics and Ethics/politics.html">
+	           				Ethics
+	           				</a>
+	                  <p>
+	                  Ethical debates about cybersecurity, in the form of blog posts.
+	                  </p>
+	           			</header>
+	           		</div>
+	              <div class="col-lg-2 col-md-2 col-sm-2">
+	           			         			<header>
+	           				<a href="../3. Mathematics/mathIntro.html">
+	           				Intro  <br>
+	           				</a>
+	                  <p>
+	                  Introduction to encryption - math, concepts, and more!
+	                </p>
+	           			</header>
+	           			<header>
+	           				<a href="../3. Mathematics/rsa.html">
+	           			  RSA
+	           				</a>
+	                  <p>
+	                  Mathematical and Conceptual explanation of RSA.
+	                  </p>
+	           			</header>
+	                <header>
+	           				<a href="../3. Mathematics/des.html">
+	           			  DES
+	           				</a>
+	                  <p>
+	                  Mathematical and Conceptual explanation of DES.
+	                  </p>
+	           			</header>
+	           		</div>
+	              <div class="col-lg-2 col-md-2 col-sm-2">
+	           			         			<header>
+	           				<a href="4. Blog/blog_post_080817.html">
+	           				Blog Post: Net Neutrality<br>
+	           				</a>
+	                  <p>
+	                  Posted on 08/08/2017.
+	                </p>
+	           			</header>
+
+	           		</div>
 							</div>
 						</div>
 					</div>
@@ -71,10 +135,12 @@
 	</div>
 	<div class="main">
 		<div class="blog-post">
+			<!--
 			<div class="blog-image">
 				<img src="../blogImages/Net_Neutrality.png" alt="Net Neutrality">
 			</div>
-			<div class="blog-header">
+		-->
+			<div class="blog-header" style="margin-top: 5%;">
 				<div class="blog-title">
 					The end of the Open Internet
 				</div>
@@ -90,7 +156,7 @@
 
 				<hr>
 			</div>
-			<div class="text-modify">
+			<div class="text-modify" style="margin-top: 5%;">
 				<button class="text-mod-button" onclick="fontSmaller()"><span class="text-minus" > - </span></button> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; <button class="text-mod-button" style="position:absolute;" onclick="fontLarger()"> <span class="text-plus" > + </span></button>
 			</div>
 			<div id="blog-text">
@@ -129,25 +195,46 @@ Net neutrality is what is defending our rights as American citizens. It prevents
 
 
 		</div>
-		<div class="footer-template">
-			<div class="row set-row-pad" id="footer-text">
-				<div class="col-lg-4 col-md-4 col-sm-4   col-lg-offset-1 col-md-offset-1 col-sm-offset-1 " data-scroll-reveal="enter from the bottom after 0.4s">
-					<h2><strong>Our Location </strong></h2>
-					<hr/>
-					<div>
-						<h4>234/80 -UFG , New Street,</h4>
-						<h4>Switzerland.</h4>
-						<h4><strong>Call:</strong> + 67-098-907-1269 / 70 / 71 </h4>
-						<h4><strong>Email: </strong>jding@thacher.org</h4>
+
+
+		<div id="PnE-sec"   style="margin-top: 50px;">
+					 <div class="overlay">
+	<div class="container set-pad">
+			<div class="row text-center">
+								 <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+										 <h1 data-scroll-reveal="enter from the bottom after 0.1s" class="header-line" >CONTACT US  </h1>
+										 <p data-scroll-reveal="enter from the bottom after 0.3s">
+											Hey! Thanks for visiting the site. If you have any comments, recommendations, criticism, send it our way below.
+												 </p>
+								 </div>
+
+						 </div>
+						 <!--/.HEADER LINE END-->
+					 <div class="row set-row-pad"  data-scroll-reveal="enter from the bottom after 0.5s" >
+
+
+								 <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+										<form action="mailto:jding@thacher.org">
+												<div class="form-group">
+														<input type="text" class="form-control "  required="required" placeholder="Your Name" />
+												</div>
+												<div class="form-group">
+														<input type="text" class="form-control " required="required"  placeholder="Your Email" />
+												</div>
+												<div class="form-group">
+														<textarea name="message" required class="form-control" style="min-height: 150px;" placeholder="Message"></textarea>
+												</div>
+												<div class="form-group">
+														<button type="submit" class="btn btn-info btn-block btn-lg">SUBMIT REQUEST</button>
+												</div>
+
+										</form>
+								</div>
+
+							 </div>
+								</div>
 					</div>
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-4   col-lg-offset-1 col-md-offset-1 col-sm-offset-1" data-scroll-reveal="enter from the bottom after 0.4s">
-					<h2><strong>Social Conectivity </strong></h2>
-					<hr/>
-					<div> <a href="#"> <img src="../img/Social/facebook.png" alt="" /> </a> <a href="#"> <img src="../img/Social/google-plus.png" alt="" /></a> <a href="#"> <img src="../img/Social/twitter.png" alt="" /></a> </div>
-				</div>
-			</div>
-		</div>
+			 </div>
 	</div>
 	<script type="text/javascript">
 		/*
