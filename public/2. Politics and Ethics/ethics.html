@@ -223,7 +223,7 @@
 
 					 </div>
 					 <!--/.HEADER LINE END-->
-				 <div class="row set-row-pad"  data-scroll-reveal="enter from the bottom after 0.5s" >
+				 <div class="row set-row-pad">
 
 
 							 <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
@@ -302,7 +302,7 @@ function vocabSet(str) {
           var defArray = defs.split("\n");
           document.getElementById("txtHint").innerHTML = "";
           for(i = 0; i < termArray.length; i++) {
-            if(termArray[i].toLowerCase().includes(str) || defArray[i].toLowerCase().includes(str)) {
+            if(termArray[i].toLowerCase().includes(str.toLowerCase()) || defArray[i].toLowerCase().includes(str.toLowerCase())) {
               document.getElementById("txtHint").innerHTML += ("<h4><b>" + termArray[i] + "</b></h4><p>" + defArray[i] + "</p><br>");
             }
           }

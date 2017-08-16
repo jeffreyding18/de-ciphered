@@ -140,19 +140,23 @@
           <ul class="inner-list">
             <li> <a href="#z2.1"> I. Where does the data go / get stored? </a> </li>
             <li> <a href="#z2.2"> II. What are cookies? </a> </li>
+            <li> <a href="#z2.3"> III. Can websites access my computer? </a> </li>
           </ul>
         </li>
         <li> <a href="#z3.0"> 3. Security Risks </a>
           <ul class="inner-list">
-            <li> <a href="#z3.1"> I. Can websites access my computer? </a> </li>
-            <li> <a href="#z3.2"> II. Access Control </a> </li>
-            <li> <a href="#z3.3"> III. Software Vulnerability </a> </li>
+
+            <li> <a href="#z3.1"> I. Access Control </a> </li>
+            <li> <a href="#z3.2"> II. Software Vulnerability </a> </li>
+            <li> <a href="#z3.3"> III. Wifi Vulnerability </a> </li>
           </ul>
         </li>
         <li> <a href="#z4.0"> 4. Common Attacks </a>
           <ul class="inner-list">
             <li> <a href="#z4.1"> I. Exploit Kits </a> </li>
             <li> <a href="#z4.2"> II. Denial of Service Attacks </a> </li>
+            <li> <a href="#z4.3"> III. XSS </a> </li>
+            <li> <a href="#z4.4"> IV. Phishing </a> </li>
           </ul>
         </li>
       </ul>
@@ -181,45 +185,92 @@
   <div class="main-subpage-header" id="headDiv">
   <h1> WEBSITES </h1>
   <p>
- 	 As any Fromsoft game or crash course history can show us, humanity lives in a constantly repeating cycle. From the social cycle theory to the average American workday, many aspects of modern society fall into this pattern. One of modern societies most important aspects, the internet, is currently stuck in perhaps the most prevalent cycle of all - the constant tug-of-war between freedom and safety.
- </p> <p> Let’s take a step back. How is this a tug of war?
- </p> <p> Well, you’ve probably heard of the social contract before. Put simply, it’s the idea that by placing some restraints on human behavior, it makes it possible for humanity to live in a community, which in turn moves society further both socially and morally. Within this community, our mental freedom to think differently than others has actually expanded, even if we are held subject to some higher power (government).
+    The intricacies and details that make up the magical content-filled invisible air-waves that are beamed into our computer at seemingly light-speeds and allow us to contact cultures that we didn’t know existed 200 years ago.
  </p>
- </p>
+  <p>
+    And we still get angry when a video won’t buffer.
+  </p>
+  <p>
+    This page tells you how networks work, and goes through the security risks that website and browsers can bring with them.
+  </p>
   </div>
   <div class="text-container">
     <div class="text">
       <div class="text-body">
         <h3 id="z1.0"> What is a website? </h3>
-        <p> I’m sure all of you know how to access and use a website (I mean, you’re on one now), but what is it? On the most fundamental level, a website is a collection of documents and files that tell the computer what to show on your screen. In order to access the website, you must navigate to a web address, typically associated with some form of domain name. Accessing the website tells your web browser what to show (using the documents and files).
+        <p> C’mon, you already know what a website is. Bad question.
+        </p>
+        <h4> No, seriously, what makes up a website? </h4>
+        <p>
+          Better question. Now you’re learning. On the most fundamental level, a website is a collection of documents and files that tell the computer what to show on your screen. In order to access the website, you must navigate to a web address, typically associated with some form of domain name. Accessing the website tells your web browser what to show (more on that later).
         </p>
 
         <h4 id="z1.1"> How does a website work? </h4>
-        <p> A website is just a bunch of pages of text. These files are written in a multitude of different coding “languages”, the most basic of which is HTML (Hypertext Markup Language) and CSS (Cascading Style Sheets). HTML makes up the bare bones of the website, dictating the text on the screen and the location of each element. In contrast, CSS tells the website how to display the HTML, defining the font, size, size, etc… For example, the HTML would tell the website to… [insert direct example from the current webpage in]. There are a multitude of different languages people use for website design, but the fundamental idea is the same - the text files define the layout and style of the website and the web browser takes this information to create a visual on your computer. </p>
+        <p> A website is just a bunch of pages of text. These files are written in a multitude of different coding languages, the most basic of which is HTML (Hypertext Markup Language) and CSS (Cascading Style Sheets). </p>
+        <p>
+          HTML makes up the bare bones of the website, dictating the text on the screen and the location of each element. In contrast, CSS tells the website how to display the HTML, defining the font, size, alignment, etc… For example, the HTML would tell the website to…
+        <p> <blockquote>
+          &#60;p&#62; place this text right here &#60;/p&#62; </blockquote> <p> and the css would tell the website to turn &#60;p id=”text”&#62;</span> <span style="color:green">this text</span> &#60;/p&#62; green using: <blockquote> #text { <br> color: green; <br> } </blockquote> <p>There are a multitude of different languages people use for website design, but the fundamental idea is the same - the text files define the layout and style of the website and the web browser takes this information to create a visual on your computer.
+        </p>
         <h4 id="z1.2"> What is a web browser? </h4>
-        <p> First off, you know what a browser is. Just an application that allows you to access the internet. They all use roughly the same design, and really aren’t that different from each other. I know this may offend some of you, but Internet Explorer (or it's edgy counterpart) gives basically the same user experience as Chrome or Firefox. Google Ultron > all. </p>
-        <p> What you may not know, however, is how a browser works. If websites are a collection of text and images and code, then the browser is a combination of a filing system and a translator. It translates the HTML and CSS code of the site into a page that is easily viewable and intractable. This means taking those text and images and placing them on the screen in the place and size the code dictates. It then sorts all those files and links them together, allowing easy access not only to the individual pages, but to the site as a whole. </p>
+        <p> First off, you know what a browser is. Just an application that allows you to access the internet. They all use roughly the same design, and really aren’t that different from each other. I know this may offend some of you, but Internet Explorer gives basically the same user experience as Chrome or Firefox. Except Google Ultron. That browser is used by NASA. </p>
+        <p> What you may not know, however, is how a browser works. Let’s give an example </p>
+        <p>
+          You are now a participant in the Great British Baking show’s technical challenge. Mary-Berry has just given you a recipe and a bunch of ingredients, but has not given you any details on the recipe sheet (you may know which step you need to start baking the cake, but not for how long.) She expects you to bake a nice looking cake. You mess up terribly, overbaking and under decorating. The cake is a mess. You monster.
+        </p>
+        <p>
+          Now, re-do this, except now you are a master baker - you know all the details of how everything fits together. You can bake a perfect cake just knowing it's ingredients and basic constructing instructions.
+        </p>
+        <p>
+          If websites are a collection of ingredients (HTML) and a recipe sheet (CSS), then a browser is a master chef that puts everything together. This means taking HTML, text and images, and correctly arranging them in the browser window. The browser then sorts all those files and links them together, allowing easy access not only to the individual pages, but to the site as a whole.
+        </p>
+        <p>
+          Unlike bakers, browsers track you. The websites you visit, the time you spend on each, information like that is catalogued and sent away to later be bundled and sold to ad agencies.
+        </p>
+        <p>
+          But this isn’t really something to be super worried about.
+        </p>
+        <p>
+          Keystrokes, passwords, that sort of information is safe, unless your browser has been compromised by a cybercriminal (which is much rarer than a compromised website). Browsers sell info about you, but so does facebook, twitter, and many other websites. Plus, browsers often have privacy settings that you can turn on, stopping most tracking functionality.
+        </p>
         <h3 id="z2.0"> How does a website communicate with my computer? </h3>
-        <p> Websites communicate with your computer via web-server. A web server is like a website’s bank. Whenever your computer wants to access a certain website, it makes a request to that website’s server, which then sends the website data to the web browser. In addition to being the keeper of the site, a web server also keeps the data that you store on said site. All of your passwords, upvotes, pictures, dank memes, posts, and regrets are kept on their respective site’s server as data. Now, this doesn’t mean just anyone can open up that server and steal all of your info. A bank has to have security, after all. </p>
-        <p> Servers and computers communicate using HTTP, or hypertext transfer protocol. It acts as a request from your computer to the server, letting the server know that you need access. If you are granted this access, you will be let through to the website. This is why every website’s URL begins with HTTP (or HTTPS if you’re secure). </p>
+        <p> Websites communicate with your computer via web-server. A web server is like a website’s bank. Whenever your computer wants to access a certain website, it makes a request to that website’s server, which then sends the website data to the web browser. In addition to being the keeper of the site, a web server also keeps the data that you store on said site. All of your passwords, upvotes, pictures, dank memes, posts, and regrets are kept on their respective site’s server as data. Now, this doesn’t mean just anyone can open up that server and steal all of your info. A bank has to have security, after all.  </p>
+        <p> Servers and computers communicate using HTTP, or hypertext transfer protocol. It acts as a request from your computer to the server, letting the server know that you need access. If you are granted this access, you will be let through to the website. This is why every website’s URL begins with HTTP (or HTTPS if you’re secure).  </p>
         <h4 id="z2.1"> Where does the data go / get stored? </h4>
-        <p> One important thing to remember is that data is physical, if small.  While 64 gigabytes of space might fit on a micro-sd nowadays, on a platform like youtube a terabyte or two just won’t cut it. There are 100,000 hours of video uploaded every minute, and that kind of data requires a lot of physical space. Web servers contain our data, but they themselves are hosted on machines, be it actual computers or gigantic 800,000ft2 google data centers. </p>
+        <p> One important thing to remember is that data is physical, if small.  While 64 gigabytes of space might fit on a micro-sd nowadays, on a platform like youtube a terabyte or two just won’t cut it. There are hundreds of thousands of  hours of video uploaded every minute, and that kind of data requires a lot of physical space. Web servers receive data from everywhere, but they themselves are hosted on machines, be it 11-inch macbooks or gigantic 800,000ft2 google data centers. Seriously, a google data center is something to behold. Take a look at <a href="https://www.youtube.com/watch?v=zDAYZU4A3w0">this video </a> and tell me you’re not impressed
+        </p>
         <h4 id="z2.2"> What are cookies? </h4>
-        <p> Cookies are round, baked goods invented in the 7th century in Persia. They are usually sweet evil, and contain many calories various delicious things in them </p>
-        <p> ... Just kidding. When you visit a website, that site creates a storage bin in your computer. This is where the website places data it needs to retrieve later - usernames (if you clicked remember me), ip addresses, and various other tracking data. Cookies are simply the packaging the website uses to ship the data into those storage bins. This only includes user data - things such as uploaded pictures and comments are all kept on the websites server. </p>
-        <h3 id="z3.0"> What are the security risks/vulnerabilities? </h3>
-        <p> To put this into perspective, an average of 30,000 websites are hacked each day. Estimates put the number of hacked websites between 2-5% of all websites. Ranging from large corporations to small blogs, these attacks can do anything from put a startup out of business to infect thousands of unknowing visitors to the website. There are many different types of vulnerabilities that websites have, but the most common are from access control and </p>
-        <h4 id="z3.1"> Can websites access my computer? </h4>
+        <p> Cookies are round, baked goods invented in the 7th century in Persia. They are usually <strike>sweet</strike> evil, and contain  <strike>various delicious things in them</strike> <strong>many calories. </strong></p>
+        <h4> What are cookies? </h4>
+        <p>  When you visit a website, that site creates a storage bin in your computer. This is where the website places data it needs to retrieve later - usernames (if you clicked remember me), ip addresses, and various other tracking data. Cookies are simply the packaging the website uses to ship the data into those storage bins. This only includes user data - things such as uploaded pictures and comments are all kept on the websites server.
+        </p>
+        <h4 id="z2.3"> Can websites access my computer? </h4>
         <p> Well, not exactly. Most websites have things called cookies (introduced above) that track little bits of information, but don’t grant complete access to the computer. There are cases when websites can give the user a virus to allow access to someone else, but a website cannot directly “access” your computer in a sense. However, there are various different ways websites can contribute to your information being compromised. </p>
-        <h6 id="z3.2"> Access Control </h6>
+        <h3 id="z3.0"> What are the security risks/vulnerabilities? </h3>
+        <p> To put this into perspective, an average of 30,000 websites are hacked each day. (to alleviate worry: approximately 300-500 websites are created each <strong>minute</strong>) Estimates put the number of hacked websites between 1-2% of all websites. Ranging from large corporations to small blogs like this one, these attacks can do anything - from putting a startup out of business to infect thousands of unknowing visitors to the website. There are many different types of vulnerabilities that websites have. Below are just a few. </p>
+        <h6 id="z3.1"> Access Control </h6>
         <p> Access Control is everything that an administrator has to log in to. This could include public log-ins (making an account for a website, like Facebook). However, this would also includes things such as logging into your personal computer, or logging into your server, or logging into your website (the CMS you use). It is important to think past just the accounts and authentication on the surface - protecting just the public log-in is not enough. If you lock the front door, but leave your windows open, what’s the point? </p>
-        <h6 id="z3.3"> Software Vulnerability </h6>
-        <p> This is where it gets complex. With access control, strong filtration and safety storing data is often enough. However, with software, thousands of lines of code are often too much to sift through. Furthermore, companies often run code from a dozen sources, in different languages and structures. The majority of the code may be up to date, but some may have not been updated and as a result, grant a vulnerability for a hacker to attack. Due to the variety in software, this is often where more targeted companies are at risk. </p>
+        <h6 id="z3.2"> Software Vulnerability </h6>
+        <p> This is where it gets complex. With access control, strong filtration and safety storing data is often enough. However, with software, thousands of lines of code are often too much to sift through. Furthermore, companies often run code from a dozen sources, in different languages and structures. The majority of the code may be up to date, but some may have not been updated and as a result, grant a vulnerability for a hacker to attack. Due to the variety in software, this is often where more targeted companies are at risk.  </p>
+        <h6 id="z3.3"> Wifi Vulnerability</h6>
+        <p>
+          Wifi is also vulnerable. Whether it’s public, private, or business related, transmission of radio waves between devices can have disastrous consequences. Public and company wifi has no obligation to protect your privacy in any way, meaning public wifi can track you, take data from your computer, or potentially download malware. Another common attack is the bogus wifi attack, where a hacker shuts down a public wifi system for a minute and then puts out another wifi signal with the same name. When people connect to the new wifi, to them everything will appear the same, but that new wifi will track data and install malware.
+        </p>
         <h3 id="z4.0"> What are common forms of cyber-attacks? </h3>
         <h6 id="z4.1"> Exploit Kits </h6>
-        <p> Exploit kits are the most common form of malware distribution, and can be difficult to avoid if you aren’t aware of how they work. When a hacker takes control of a website, often they don’t do anything right away. Instead, they make it so that anyone who visits that site will automatically be redirected to another web server, which silently gathers data about the user on it. Once it has gathered enough data, the server figures out how it can exploit your computer, and silently downloads and installs malware onto it. Now, it's important to realize that exploit kits aren’t a kind of malware by themselves, just a method used to download malware to your computer. For ways to avoid getting your computer infected, look below. </p>
+        <p> Exploit kits are the most common form of malware distribution, and can be difficult to avoid if you aren’t aware of how they work. When a hacker takes control of a website, often they don’t do anything right away. Instead, they make it so that anyone who visits that site will automatically be redirected to another web server, which silently gathers data about the vulnerable users. Once it has gathered enough data, the server figures out how it can exploit your computer, and silently downloads and installs malware onto it. Now, it's important to realize that exploit kits aren’t a kind of malware by themselves, just a method used to download malware to your computer.
+        </p>
         <h6 id="z4.2"> Denial of Service Attacks </h6>
-        <p> You’ve probably heard of the DoS attack (Denial of Service attack). It can be devastating shutting down popular websites for hours and seemingly coming out of nowhere. Think of a website like a business - the only way to access into the website is through it's front door. Now, if someone tries to block that front door, it gets harder to move around him and into the website. If a hundred people block the door, you’d have to barge your way through. If a thousand people block it, there's no getting in. In a simmelar way, a DoS attack floods a websites server with bogus requests, blocking access. WIth larger websites, this can equate to tens of thousands  of requests per second, but the real devestation acomes when smaller websites are DoSed, as it take quite a few resources to recover. 175 minerals, and 250 vespean gas to be exact. </p>
+        <p> You’ve probably heard of the DoS attack (Denial of Service attack). It can be devastating, shutting down popular websites for hours and seemingly coming out of nowhere. Think of a website like a business building - the only way to enter is through it's front door. Now, if someone tries to block that front door, it gets harder to move around him and into the building. If a hundred people block the door, as on a trafficked day, you’d have to barge your way through, but you’d still make it in. If a thousand people block it, there's no getting in. In a similar way, a DoS attack floods a website's server with bogus requests, blocking access. WIth larger websites, this can equate to tens of thousands  of requests per second, but the real devastation comes when smaller websites are DoSed, as it take quite a few resources to recover.
+        <h6 id="z4.3"> XSS </h6>
+        <p>
+          XSS attacks, or Cross Site Scripting attacks, are similar to exploit kits in nature. In such an attack, a trusted website gets hacked. However, instead of silently downloading malware, an XSS attack installs malware with other data downloaded from the site, exploiting your computer's trust/download settings to install the malware faster and easier. These attacks can be incredibly dangerous, as they can happen from sites that seem completely safe.
+        </p>
+        <h6 id="z4.4"> Phishing </h6>
+        <p>
+          Phishing is an old and effective strategy to obtain personal information, and has been used for thousands of years. You’ve probably already encountered and ignored it. It’s the practice of disguising oneself as a trustworthy company in order to obtain sensitive information. All those “flash player out of date” ads use this. You may want to warn your older relatives and friends about attacks like this, as older age groups are particularly vulnerable to these. You can see through them though.
+        </p>
+ </p>
         <div class="next-page">
           <button class="next-page-button" onClick="javascript:document.location='Non-Websites.html'"> Next Topic: NON-WEBSITES </button>
         </div>
@@ -239,7 +290,7 @@
 
 					 </div>
 					 <!--/.HEADER LINE END-->
-				 <div class="row set-row-pad"  data-scroll-reveal="enter from the bottom after 0.5s" >
+				 <div class="row set-row-pad">
 
 
 							 <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
@@ -318,7 +369,7 @@ function vocabSet(str) {
           var defArray = defs.split("\n");
           document.getElementById("txtHint").innerHTML = "";
           for(i = 0; i < termArray.length; i++) {
-            if(termArray[i].toLowerCase().includes(str) || defArray[i].toLowerCase().includes(str)) {
+            if(termArray[i].toLowerCase().includes(str.toLowerCase()) || defArray[i].toLowerCase().includes(str.toLowerCase())) {
               document.getElementById("txtHint").innerHTML += ("<h4><b>" + termArray[i] + "</b></h4><p>" + defArray[i] + "</p><br>");
             }
           }
