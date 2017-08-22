@@ -1002,6 +1002,11 @@ blockquote {
 
 }
 
+.to-blog-button:disabled {
+	background-color: lightgrey;
+	opacity: .4;
+}
+
 
 @media all and (max-width: 1250px) {
 	.sidebar {
