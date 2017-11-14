@@ -850,6 +850,19 @@ h1::after {
 	font-size: 24px;
 	font-family: 'Josefin Sans', sans-serif;
 }
+
+@media (max-width: 1500px) {
+	.main-subpage-header> h1 {
+		font-size: 150px !important;
+	}
+
+	.main-subpage-header > p {
+		font-size: 20px !important;
+		width: 75% !important;
+		margin-left: 12% !important;
+	}
+}
+
 .text> h1:after {
 	border: none;
 }
